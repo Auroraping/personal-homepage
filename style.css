@@ -1,6 +1,6 @@
-/* --- 1. 全局基础设置 --- */
-body {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+/* 全局基础设置 */
+.body-element {
+    font-family: 'ZCOOL XiaoWei', Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     color: #2c3e50;
     margin: 0;
@@ -8,28 +8,10 @@ body {
     line-height: 1.6;
 }
 
-/* --- 2. 响应式布局容器 (要求70%宽度) --- */
-@media (min-width: 1080px) {
-    #app, .site-footer {
-        width: 70%;
-        margin: 0 auto;
-    }
+.top-anchor {
+    display: block;
 }
 
-@media (max-width: 1080px) {
-    #app, .site-footer {
-        width: 100%;
-    }
-}
-
-#app {
-    background: white;
-    padding: 0 4.7vw 50px;
-    box-sizing: border-box;
-    min-height: 100vh;
-}
-
-/* --- 3. 顶部导航栏 --- */
 .nav-bar {
     background-color: rgba(52, 85, 139, 0.9);
     position: sticky;
@@ -45,6 +27,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
+}
+
+@media (max-width: 1080px) { 
+    .nav-container { width: 95%; } 
+    .app-container { width: 100% !important; }
+    .site-footer { width: 100% !important; }
 }
 
 .nav-name {
@@ -66,157 +54,128 @@ body {
     font-weight: 500;
 }
 
-/* --- 4. 个人简介区 (About) --- */
+.app-container {
+    width: 70%;
+    margin: 0 auto;
+    background: white;
+    padding: 0 4.7vw 50px;
+    box-sizing: border-box;
+}
+
 .header-section {
     display: flex;
     padding: 50px 0;
     gap: 40px;
     border-bottom: 1px dashed #bdd3e8;
-    align-items: flex-start;
 }
 
-.avatar-wrap {
-    flex: 0 0 180px;
-    text-align: center;
-}
+.avatar-wrap { flex: 0 0 180px; text-align: center; }
+.avatar-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid #f0f4fa; }
 
-.avatar-img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #f0f4fa;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+.info-wrap { flex: 1; text-align: left; font-size: 1rem; color: #333; line-height: 1.6; }
+.intro-p { margin-top: 0; margin-bottom: 15px; }
+.margin-top-15 { margin-top: 15px; }
+.font-bold { font-weight: bold; }
+.som-link { color: #333; text-decoration: underline; }
 
-.info-wrap {
-    flex: 1;
-}
+.contact-info { margin-top: 20px; text-align: left; padding-left: 10px; }
+.contact-item { font-size: 14px; color: #666; margin-bottom: 8px; display: flex; align-items: center; }
+.contact-item-last { font-size: 14px; color: #666; display: flex; align-items: center; }
+.contact-icon { width: 20px; color: #34558b; display: inline-block; }
+.contact-text { margin-left: 8px; }
 
-.info-wrap strong {
-    color: #163456;
-}
-
-.info-wrap a {
-    color: #34558b;
-    text-decoration: underline;
-}
-
-/* --- 5. 通用板块标题 (News/Projects/Reading) --- */
 .section-header {
-    font-size: 18px;
-    font-weight: 700;
-    text-align: left;
-    background: #f0f4fa; /* 默认蓝色背景 */
-    padding: 10px 20px;
-    border-radius: 8px;
+    font-size: 18px; font-weight: 700; text-align: left;
+    background: #f0f4fa; padding: 10px 20px; border-radius: 8px;
     margin: 30px 0 15px;
 }
 
-/* 针对 Experience 等板块的高亮标题 */
-.section-header.yellow {
-    background: #fff3bf;
-    color: #b8860b;
-}
+.card-body { text-align: left; padding: 0 15px; }
+.padding-left-20 { padding-left: 20px; border: none; }
 
-/* --- 6. 内容区块 (Card Body) --- */
-.card-body {
-    text-align: left;
-    padding: 15px 20px;
-}
+.news-item { margin-bottom: 15px; line-height: 1.5; color: #333; }
+.highlight-text-dark { color: #333; }
+.highlight-text-red { color: #cb181d; }
 
-/* 实习高亮样式 (红色边框) */
-.intern-highlight {
-    border-left: 5px solid #cb181d;
-    background: #fff5f5;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-    border-radius: 0 8px 8px 0;
-}
+.project-item { margin-bottom: 25px; }
+.project-title { margin: 0; color: #34558b; font-size: 1.05rem; }
+.project-desc { font-size: 0.95rem; color: #555; margin: 5px 0; }
 
-/* --- 7. 书单板块 (核心修改：缩小图片) --- */
-.book-container {
-    padding: 10px 20px;
-}
-
+/* 书单 */
+.book-container { display: block; }
 .book-list {
-    padding-left: 0;
-    list-style: none; /* 使用自定义布局，隐藏默认序号 */
-}
-
-.book-entry {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    margin-bottom: 25px;
-    align-items: flex-start;
-    border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 15px;
+    padding: 0;
+    list-style: none;
+    margin: 0;
 }
-
-/* --- 核心修改：统一书籍封面为大正方形 --- */
-/* --- 1. 核心修改：统一缩小的正方形封面 --- */
-.book-cover {
-    width: 80px;        /* 缩小到 80px，更加紧凑 */
-    height: 80px;       /* 严格正方形 */
-    object-fit: cover;  /* 确保封面图片自动裁剪不拉伸 */
-    border-radius: 6px; /* 稍微给一点圆角，增加精致感 */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 减弱阴影，配合小尺寸 */
-    border: 2px solid #f0f4fa; /* 保持与头像一致的边框风格 */
-    flex-shrink: 0;     /* 防止图片被文字挤压变形 */
-}
-
-/* --- 2. 调整列表项布局 --- */
 .book-entry {
-    display: flex;
-    gap: 20px;          /* 图片和文字的间距 */
-    margin-bottom: 20px;/* 每个条目之间的距离 */
-    align-items: center;/* 强制文字在图片高度范围内垂直居中 */
-    border-bottom: 1px solid #f5f5f5;
-    padding-bottom: 15px;
-}
-
-/* --- 3. 优化文字排版 --- */
-.book-info {
-    flex: 1;
+    width: calc(20% - 16px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    background: #fff;
+    padding-bottom: 10px;
+    box-sizing: border-box;
 }
-
+.book-cover {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    flex-shrink: 0;
+}
+.book-info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 .book-title {
-    margin: 0 0 5px 0;
-    font-size: 1.1rem;  /* 稍微调小书名字号 */
-    color: #34558b;
+    margin: 0 0 8px 0;
+    font-size: 14px;
     font-weight: 600;
+    text-align: left;
+    color: #333;
 }
-
+.book-title::before { content: "《"; }
+.book-title::after { content: "》"; }
 .book-meta {
-    font-size: 0.9rem;
-    color: #777;
-    margin-bottom: 8px;
+    font-size: 12px;
+    color: #666;
+    margin: 0 0 10px 0;
+    line-height: 1.6;
+    text-align: left;
 }
+.meta-author { display: block; }
+.meta-date { display: block; }
 
 .buy-link {
-    align-self: flex-start; /* 按钮靠左对齐 */
-    font-size: 12px;
-    color: #cb181d;
-    text-decoration: none;
-    border: 1px solid #cb181d;
-    padding: 2px 10px;
+    display: block;
+    margin: auto 10px 0 10px;
+    background: #4a5c6a;
+    color: #fff !important;
+    text-align: center;
+    padding: 4px 0;
     border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    transition: background 0.3s;
 }
-
 .buy-link:hover {
-    background: #cb181d;
-    color: white !important;
+    background: #36454f;
 }
 
-/* --- 8. 返回顶部按钮 --- */
+/* 底部 */
 .footer-action {
     text-align: center;
     margin-top: 50px;
 }
-
 .back-to-top {
     text-decoration: none;
     color: #34558b;
@@ -224,19 +183,20 @@ body {
     padding: 10px 30px;
     border: 1px solid #34558b;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: background 0.3s;
+    display: inline-block;
 }
-
 .back-to-top:hover {
     background: #34558b;
-    color: white;
+    color: white !important;
 }
 
-/* --- 9. 页脚 --- */
 .site-footer {
     background-color: rgba(52, 85, 139, 0.9);
-    color: white;
-    text-align: center;
-    padding: 15px 0;
+    color: white; 
+    width: 70%; 
+    margin: 0 auto;
+    text-align: center; 
+    padding: 10px 0; 
     font-size: 12px;
 }

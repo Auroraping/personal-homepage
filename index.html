@@ -6,187 +6,13 @@
     <title>Lei Wang | Zhejiang University</title>
     <script src="https://kit.fontawesome.com/805ab53803.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
-    <style>
-        /* 全局基础设置 */
-        body {
-            font-family: 'ZCOOL XiaoWei', Avenir, Helvetica, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            color: #2c3e50;
-            margin: 0;
-            background-color: #fcfcfc;
-            line-height: 1.6;
-        }
-
-        /* 顶部蓝色导航栏 - 100% 宽度 */
-        .nav-bar {
-            background-color: rgba(52, 85, 139, 0.9);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            width: 100%;
-        }
-
-        /* 导航栏内部容器 - 限制 70% 宽度并左右分栏 */
-        .nav-container {
-            width: 70%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between; /* 名字在左，链接在右 */
-            align-items: center;
-            padding: 12px 0;
-        }
-
-        @media (max-width: 1080px) { .nav-container { width: 95%; } }
-
-        .nav-name {
-            color: white;
-            font-size: 20px;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-link {
-            color: white !important;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        /* 正文容器 */
-        #app {
-            width: 70%;
-            margin: 0 auto;
-            background: white;
-            padding: 0 4.7vw 50px;
-            box-sizing: border-box;
-        }
-
-        @media (max-width: 1080px) { #app { width: 100%; } }
-
-        /* 个人简介区 */
-        .header-section {
-            display: flex;
-            padding: 50px 0;
-            gap: 40px;
-            border-bottom: 1px dashed #bdd3e8;
-        }
-
-        .avatar-wrap { flex: 0 0 180px; text-align: center; }
-        .avatar-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid #f0f4fa; }
-        
-        .info-wrap { flex: 1; text-align: left; }
-        .info-wrap h1 { font-size: 2.5rem; margin: 0; color: #163456; }
-        .school-tag { font-size: 1.1rem; color: #34558b; font-weight: 600; margin-bottom: 15px; }
-
-        /* 范例标志性的 Year Header */
-        .section-header {
-            font-size: 18px; font-weight: 700; text-align: left;
-            background: #f0f4fa; padding: 10px 20px; border-radius: 8px;
-            margin: 30px 0 15px;
-        }
-        .section-header.yellow { background: #fff3bf; color: #b8860b; }
-
-        /* 实习/项目详情 */
-        .card-body { text-align: left; padding: 0 15px; }
-        
-        .intern-highlight {
-            border-left: 5px solid #cb181d;
-            background: #fff5f5;
-            padding: 15px 20px;
-            color: #cb181d;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 20px;
-        }
-        .intern-highlight h3 { margin-top: 0; font-size: 1.1rem; color: #cb181d; }
-
-        .project-item { margin-bottom: 25px; }
-        .project-item h4 { margin: 0; color: #34558b; font-size: 1.05rem; }
-        .project-item p { font-size: 0.95rem; color: #555; margin: 5px 0; }
-
-        /* 书单 */
-        .book-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 0;
-            list-style: none;
-        }
-        .book-entry {
-            width: calc(20% - 16px);
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            background: #fff;
-            padding-bottom: 10px;
-            box-sizing: border-box;
-        }
-        .book-cover {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            flex-shrink: 0;
-        }
-        .book-info {
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-        .book-title {
-            margin: 0 0 8px 0;
-            font-size: 14px;
-            font-weight: 600;
-            text-align: left;
-            color: #333;
-        }
-        .book-title::before { content: "《"; }
-        .book-title::after { content: "》"; }
-        .book-meta {
-            font-size: 12px;
-            color: #666;
-            margin: 0 0 10px 0;
-            line-height: 1.6;
-            text-align: left;
-        }
-        .buy-link {
-            display: block;
-            margin: auto 10px 0 10px;
-            background: #4a5c6a;
-            color: #fff !important;
-            text-align: center;
-            padding: 4px 0;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 12px;
-            transition: background 0.3s;
-        }
-        .buy-link:hover {
-            background: #36454f;
-        }
-
-        /* 底部 */
-        footer {
-            background-color: rgba(52, 85, 139, 0.9);
-            color: white; width: 70%; margin: 0 auto;
-            text-align: center; padding: 10px 0; font-size: 12px;
-        }
-        @media (max-width: 1080px) { footer { width: 100%; } }
-    </style>
+    <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body class="body-element">
 
-    <div id="top"></div>
+    <div id="top" class="top-anchor"></div>
 
-    <nav class="nav-bar">
+    <div class="nav-bar">
         <div class="nav-container">
             <a href="#" class="nav-name">Lei Wang (王磊)</a>
             <div class="nav-links">
@@ -196,158 +22,189 @@
                 <a class="nav-link" href="#reading">Reading</a>
             </div>
         </div>
-    </nav>
-
-    <div id="app">
-       <section class="header-section" id="about">
-    <div class="avatar-wrap">
-        <img src="images/avatar.jpg" class="avatar-img">
-        
-        <div class="contact-info" style="margin-top: 20px; text-align: left; padding-left: 10px;">
-            <div style="font-size: 14px; color: #666; margin-bottom: 8px; display: flex; align-items: center;">
-                <i class="fa-solid fa-envelope" style="width: 20px; color: #34558b;"></i>
-                <span style="margin-left: 8px;">3481618383@qq.com</span>
-            </div>
-            <div style="font-size: 14px; color: #666; margin-bottom: 8px; display: flex; align-items: center;">
-                <i class="fa-solid fa-phone" style="width: 20px; color: #34558b;"></i>
-                <span style="margin-left: 8px;">13198491268</span>
-            </div>
-            <div style="font-size: 14px; color: #666; display: flex; align-items: center;">
-                <i class="fa-brands fa-weixin" style="width: 20px; color: #34558b;"></i>
-                <span style="margin-left: 8px;">Mrthreestone666</span>
-            </div>
-        </div>
     </div>
 
-<div class="info-wrap" style="text-align: left; font-size: 1rem; color: #333; line-height: 1.6;">
-    <p>
-        <strong>Lei Wang (王磊)</strong> is currently an undergraduate student at 
-        <a href="https://www.zju.edu.cn/" target="_blank" style="color: #333; text-decoration: underline;">Zhejiang University</a> (ZJU), 
-        majoring in Information Management and Information Systems. His research interests include 
-        <strong>Python Data Science</strong>, Supply Chain Optimization, and Financial Engineering.
-    </p>
-    <p style="margin-top: 15px;">
-        He is also a multi-instrumentalist who plays 
-        <strong>Guitar, Drums, and Pipa</strong>. He enjoys the intersection of 
-        rigorous data logic and artistic creativity.
-    </p>
-</div>
-</section>
-
-       <div class="section-header">News</div> <div class="card-body" style="border: none; padding-left: 20px;">
-    <p style="margin-bottom: 15px; line-height: 1.5;">
-        <strong style="color: #333;">2026-01-01:</strong> 
-        <span style="color: #cb181d;">
-            I am currently working as a <strong>Python Data Analyst Intern</strong> at <strong>Yijing Technology (移景科技)</strong>. 
-            My work focuses on engineering automated ETL pipelines and developing real-time BI dashboards to enhance decision-making efficiency.
-        </span>
-    </p>
-
-    <p style="margin-bottom: 15px; line-height: 1.5; color: #333;">
-        <strong>2025-12-15:</strong> 
-        Successfully completed the <strong>Walmart M5 Forecasting</strong> project, achieving an R² of 0.96 by utilizing 
-        LightGBM and Tweedie Loss to handle long-tail retail distributions.
-    </p>
-
-    <p style="margin-bottom: 15px; line-height: 1.5; color: #333;">
-        <strong>2025-11-01:</strong> 
-        Started the SRTP project "Blood Center Inventory Decision System," developing a <strong>Joint Estimation and Optimization (JEO)</strong> 
-        framework to balance expiration risks and shortage costs.
-    </p>
-</div>
-
-        <div class="section-header">Selected Projects</div>
-        <div class="card-body">
-            <div class="project-item">
-                <h4>Walmart M5 Forecasting & Inventory Optimization</h4>
-                <p>Analyzed 1,913 days of sales data to predict future demand. Utilized <strong>LightGBM</strong> and <strong>Tweedie Loss</strong> to handle long-tail distributions, achieving an R² of 0.96 at the aggregate level.</p>
+    <div id="app" class="app-container">
+       <div class="header-section" id="about">
+            <div class="avatar-wrap">
+                <img src="images/avatar.jpg" class="avatar-img" alt="avatar">
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="fa-solid fa-envelope contact-icon"></span>
+                        <span class="contact-text">3481618383@qq.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="fa-solid fa-phone contact-icon"></span>
+                        <span class="contact-text">13198491268</span>
+                    </div>
+                    <div class="contact-item-last">
+                        <span class="fa-brands fa-weixin contact-icon"></span>
+                        <span class="contact-text">Mrthreestone666</span>
+                    </div>
+                </div>
             </div>
-            <div class="project-item">
-                <h4>Blood Center Inventory Decision System (SRTP)</h4>
-                <p>Developed a <strong>Joint Estimation and Optimization (JEO)</strong> framework to balance expiration risks and shortage costs for Grade-A hospital blood centers.</p>
+
+            <div class="info-wrap">
+                <p class="intro-p">
+                    <span class="font-bold">Lei Wang (王磊)</span> is currently an undergraduate student at the  
+                    <a href="http://www.som.zju.edu.cn/" target="_blank" class="som-link">School of Management, Zhejiang University</a> (ZJU), 
+                    majoring in Information Management and Information Systems. His research interests include 
+                    <span class="font-bold">Python Data Science</span>, Supply Chain Optimization, and Financial Engineering.
+                </p>
+                <p class="intro-p margin-top-15">
+                    He is also a multi-instrumentalist who plays 
+                    <span class="font-bold">Guitar, Drums, and Pipa</span>. He enjoys the intersection of 
+                    rigorous data logic and artistic creativity.
+                </p>
             </div>
         </div>
 
-<div class="section-header" id="reading">Reading List (Top 10)</div>
+        <div class="section-header" id="experience">News</div> 
+        <div class="card-body padding-left-20">
+            <p class="news-item">
+                <span class="font-bold highlight-text-dark">2026-01-01:</span> 
+                <span class="highlight-text-red">
+                    I am currently working as a <span class="font-bold">Python Data Analyst Intern</span> at <span class="font-bold">Yijing Technology (移景科技)</span>. 
+                    My work focuses on engineering automated ETL pipelines and developing real-time BI dashboards to enhance decision-making efficiency.
+                </span>
+            </p>
+
+            <p class="news-item">
+                <span class="font-bold highlight-text-dark">2025-12-15:</span> 
+                Successfully completed the <span class="font-bold">Walmart M5 Forecasting</span> project, achieving an R² of 0.96 by utilizing 
+                LightGBM and Tweedie Loss to handle long-tail retail distributions.
+            </p>
+
+            <p class="news-item">
+                <span class="font-bold highlight-text-dark">2025-11-01:</span> 
+                Started the SRTP project "Blood Center Inventory Decision System," developing a <span class="font-bold">Joint Estimation and Optimization (JEO)</span> 
+                framework to balance expiration risks and shortage costs.
+            </p>
+        </div>
+
+        <div class="section-header" id="projects">Selected Projects</div>
+        <div class="card-body">
+            <div class="project-item">
+                <h4 class="project-title">Walmart M5 Forecasting & Inventory Optimization</h4>
+                <p class="project-desc">Analyzed 1,913 days of sales data to predict future demand. Utilized <span class="font-bold">LightGBM</span> and <span class="font-bold">Tweedie Loss</span> to handle long-tail distributions, achieving an R² of 0.96 at the aggregate level.</p>
+            </div>
+            <div class="project-item">
+                <h4 class="project-title">Blood Center Inventory Decision System (SRTP)</h4>
+                <p class="project-desc">Developed a <span class="font-bold">Joint Estimation and Optimization (JEO)</span> framework to balance expiration risks and shortage costs for Grade-A hospital blood centers.</p>
+            </div>
+        </div>
+
+        <div class="section-header" id="reading">Reading List (Top 10)</div>
         <div class="book-container">
             <ol class="book-list">
                 <li class="book-entry">
-                    <img src="https://covers.openlibrary.org/b/isbn/9787506365437-M.jpg" class="book-cover" alt="活着">
+                    <img src="images/book1.jpg" class="book-cover" alt="活着">
                     <div class="book-info">
                         <h4 class="book-title">活着</h4>
-                        <p class="book-meta">作者：余华<br>阅读日期：2025-10</p>
+                        <div class="book-meta">
+                            <span class="meta-author">作者：余华</span>
+                            <span class="meta-date">阅读日期：2025-10</span>
+                        </div>
                         <a href="https://search.jd.com/Search?keyword=%E6%B4%BB%E7%9D%80+%E4%BD%99%E5%8D%8E" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
-                    <img src="https://covers.openlibrary.org/b/isbn/9787020024750-M.jpg" class="book-cover" alt="围城">
+                    <img src="images/book2.jpg" class="book-cover" alt="围城">
                     <div class="book-info">
                         <h4 class="book-title">围城</h4>
-                        <p class="book-meta">作者：钱钟书<br>阅读日期：2025-09</p>
+                        <div class="book-meta">
+                            <span class="meta-author">作者：钱钟书</span>
+                            <span class="meta-date">阅读日期：2025-09</span>
+                        </div>
                         <a href="https://search.jd.com/Search?keyword=%E5%9B%B4%E5%9F%8E+%E9%92%B1%E9%92%9F%E4%B9%A6" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
-                    <img src="https://covers.openlibrary.org/b/isbn/9787536692930-M.jpg" class="book-cover" alt="三体">
+                    <img src="images/book3.jpg" class="book-cover" alt="三体">
                     <div class="book-info">
                         <h4 class="book-title">三体</h4>
-                        <p class="book-meta">作者：刘慈欣<br>阅读日期：2025-08</p>
+                        <div class="book-meta">
+                            <span class="meta-author">作者：刘慈欣</span>
+                            <span class="meta-date">阅读日期：2025-08</span>
+                        </div>
                         <a href="https://search.jd.com/Search?keyword=%E4%B8%89%E4%BD%93+%E5%88%98%E6%85%88%E6%AC%A3" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
-                    <img src="https://covers.openlibrary.org/b/isbn/9787020002207-M.jpg" class="book-cover" alt="红楼梦">
+                    <img src="images/book4.jpg" class="book-cover" alt="红楼梦">
                     <div class="book-info">
                         <h4 class="book-title">红楼梦</h4>
-                        <p class="book-meta">作者：曹雪芹<br>阅读日期：2025-07</p>
+                        <div class="book-meta">
+                            <span class="meta-author">作者：曹雪芹</span>
+                            <span class="meta-date">阅读日期：2025-07</span>
+                        </div>
                         <a href="https://search.jd.com/Search?keyword=%E7%BA%A2%E6%A5%BC%E6%A2%A6+%E6%9B%B9%E9%9B%AA%E8%8A%B9" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
-                    <img src="https://covers.openlibrary.org/b/isbn/9787530212004-M.jpg" class="book-cover" alt="平凡的世界">
+                    <img src="images/book5.jpg" class="book-cover" alt="平凡的世界">
                     <div class="book-info">
                         <h4 class="book-title">平凡的世界</h4>
-                        <p class="book-meta">作者：路遥<br>阅读日期：2025-06</p>
+                        <div class="book-meta">
+                            <span class="meta-author">作者：路遥</span>
+                            <span class="meta-date">阅读日期：2025-06</span>
+                        </div>
                         <a href="https://search.jd.com/Search?keyword=%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C+%E8%B7%AF%E9%81%A5" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
-                    <img src="https://covers.openlibrary.org/b/isbn/9787544253994-M.jpg" class="book-cover" alt="百年孤独">
+                    <img src="images/book6.jpg" class="book-cover" alt="百年孤独">
                     <div class="book-info">
                         <h4 class="book-title">百年孤独</h4>
-                        <p class="book-meta">作者：加西亚·马尔克斯<br>阅读日期：2025-05</p>
+                        <div class="book-meta">
+                            <span class="meta-author">作者：加西亚·马尔克斯</span>
+                            <span class="meta-date">阅读日期：2025-05</span>
+                        </div>
                         <a href="https://search.jd.com/Search?keyword=%E7%99%BE%E5%B9%B4%E5%AD%A4%E7%8B%AC+%E5%8A%A0%E8%A5%BF%E4%BA%9A%C2%B7%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
-                    <img src="https://covers.openlibrary.org/b/isbn/9787544270878-M.jpg" class="book-cover" alt="解忧杂货店">
+                    <img src="images/book7.jpg" class="book-cover" alt="解忧杂货店">
                     <div class="book-info">
                         <h4 class="book-title">解忧杂货店</h4>
-                        <p class="book-meta">作者：东野圭吾<br>阅读日期：2025-04</p>
+                        <div class="book-meta">
+                            <span class="meta-author">作者：东野圭吾</span>
+                            <span class="meta-date">阅读日期：2025-04</span>
+                        </div>
                         <a href="https://search.jd.com/Search?keyword=%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97+%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
-                    <img src="https://covers.openlibrary.org/b/isbn/9787208061644-M.jpg" class="book-cover" alt="追风筝的人">
+                    <img src="images/book8.jpg" class="book-cover" alt="追风筝的人">
                     <div class="book-info">
                         <h4 class="book-title">追风筝的人</h4>
-                        <p class="book-meta">作者：卡勒德·胡赛尼<br>阅读日期：2025-03</p>
+                        <div class="book-meta">
+                            <span class="meta-author">作者：卡勒德·胡赛尼</span>
+                            <span class="meta-date">阅读日期：2025-03</span>
+                        </div>
                         <a href="https://search.jd.com/Search?keyword=%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA+%E5%8D%A1%E5%8B%92%E5%BE%B7%C2%B7%E8%83%A1%E8%B5%9B%E5%B0%BC" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
-                    <img src="https://covers.openlibrary.org/b/isbn/9787020042492-M.jpg" class="book-cover" alt="小王子">
+                    <img src="images/book9.jpg" class="book-cover" alt="小王子">
                     <div class="book-info">
                         <h4 class="book-title">小王子</h4>
-                        <p class="book-meta">作者：安托万·德·圣-埃克苏佩里<br>阅读日期：2025-02</p>
+                        <div class="book-meta">
+                            <span class="meta-author">作者：安托万·德·圣-埃克苏佩里</span>
+                            <span class="meta-date">阅读日期：2025-02</span>
+                        </div>
                         <a href="https://search.jd.com/Search?keyword=%E5%B0%8F%E7%8E%8B%E5%AD%90+%E5%AE%89%E6%89%98%E4%B8%87%C2%B7%E5%BE%B7%C2%B7%E5%9C%A3-%E5%9F%83%E5%85%8B%E8%8B%8F%E4%BD%A9%E9%87%8C" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
-                    <img src="https://covers.openlibrary.org/b/isbn/9787508647357-M.jpg" class="book-cover" alt="人类简史">
+                    <img src="images/book10.jpg" class="book-cover" alt="人类简史">
                     <div class="book-info">
                         <h4 class="book-title">人类简史</h4>
-                        <p class="book-meta">作者：尤瓦尔·赫拉利<br>阅读日期：2025-01</p>
+                        <div class="book-meta">
+                            <span class="meta-author">作者：尤瓦尔·赫拉利</span>
+                            <span class="meta-date">阅读日期：2025-01</span>
+                        </div>
                         <a href="https://search.jd.com/Search?keyword=%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2+%E5%B0%A4%E7%93%A6%E5%B0%94%C2%B7%E8%B5%AB%E6%8B%89%E5%88%A9" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
@@ -359,9 +216,9 @@
         <a href="#top" class="back-to-top">回到顶部</a>
     </div>
 
-    <footer>
+    <div class="site-footer">
         Copyright © 2026 Lei Wang. All Rights Reserved. | Zhejiang University
-    </footer>
+    </div>
 
 </body>
 </html>
