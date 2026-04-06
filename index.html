@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Lei Wang | Zhejiang University</title>
     <script src="https://kit.fontawesome.com/805ab53803.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
     <style>
         /* 全局基础设置 */
         body {
-            font-family: Avenir, Helvetica, Arial, sans-serif;
+            font-family: 'ZCOOL XiaoWei', Avenir, Helvetica, Arial, sans-serif;
             -webkit-font-smoothing: antialiased;
             color: #2c3e50;
             margin: 0;
@@ -108,8 +109,69 @@
         .project-item p { font-size: 0.95rem; color: #555; margin: 5px 0; }
 
         /* 书单 */
-        .book-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
-        .book-item { font-size: 14px; border-bottom: 1px solid #eee; padding: 5px 0; }
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+        .book-entry {
+            width: calc(20% - 16px);
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            background: #fff;
+            padding-bottom: 10px;
+            box-sizing: border-box;
+        }
+        .book-cover {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            flex-shrink: 0;
+        }
+        .book-info {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .book-title {
+            margin: 0 0 8px 0;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+            color: #333;
+        }
+        .book-title::before { content: "《"; }
+        .book-title::after { content: "》"; }
+        .book-meta {
+            font-size: 12px;
+            color: #666;
+            margin: 0 0 10px 0;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .buy-link {
+            display: block;
+            margin: auto 10px 0 10px;
+            background: #4a5c6a;
+            color: #fff !important;
+            text-align: center;
+            padding: 4px 0;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 12px;
+            transition: background 0.3s;
+        }
+        .buy-link:hover {
+            background: #36454f;
+        }
 
         /* 底部 */
         footer {
@@ -213,80 +275,80 @@
                     <img src="https://covers.openlibrary.org/b/isbn/9787506365437-M.jpg" class="book-cover" alt="活着">
                     <div class="book-info">
                         <h4 class="book-title">活着</h4>
-                        <p class="book-meta">作者: 余华 | 读书日期: 2025-10</p>
-                        <a href="https://item.jd.com/11856231.html" target="_blank" class="buy-link">京东购买</a>
+                        <p class="book-meta">作者：余华<br>阅读日期：2025-10</p>
+                        <a href="https://search.jd.com/Search?keyword=%E6%B4%BB%E7%9D%80+%E4%BD%99%E5%8D%8E" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
                     <img src="https://covers.openlibrary.org/b/isbn/9787020024750-M.jpg" class="book-cover" alt="围城">
                     <div class="book-info">
                         <h4 class="book-title">围城</h4>
-                        <p class="book-meta">作者: 钱钟书 | 读书日期: 2025-09</p>
-                        <a href="https://item.jd.com/11856230.html" target="_blank" class="buy-link">京东购买</a>
+                        <p class="book-meta">作者：钱钟书<br>阅读日期：2025-09</p>
+                        <a href="https://search.jd.com/Search?keyword=%E5%9B%B4%E5%9F%8E+%E9%92%B1%E9%92%9F%E4%B9%A6" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
                     <img src="https://covers.openlibrary.org/b/isbn/9787536692930-M.jpg" class="book-cover" alt="三体">
                     <div class="book-info">
                         <h4 class="book-title">三体</h4>
-                        <p class="book-meta">作者: 刘慈欣 | 读书日期: 2025-08</p>
-                        <a href="https://item.jd.com/10011386.html" target="_blank" class="buy-link">京东购买</a>
+                        <p class="book-meta">作者：刘慈欣<br>阅读日期：2025-08</p>
+                        <a href="https://search.jd.com/Search?keyword=%E4%B8%89%E4%BD%93+%E5%88%98%E6%85%88%E6%AC%A3" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
                     <img src="https://covers.openlibrary.org/b/isbn/9787020002207-M.jpg" class="book-cover" alt="红楼梦">
                     <div class="book-info">
                         <h4 class="book-title">红楼梦</h4>
-                        <p class="book-meta">作者: 曹雪芹 | 读书日期: 2025-07</p>
-                        <a href="https://item.jd.com/10011385.html" target="_blank" class="buy-link">京东购买</a>
+                        <p class="book-meta">作者：曹雪芹<br>阅读日期：2025-07</p>
+                        <a href="https://search.jd.com/Search?keyword=%E7%BA%A2%E6%A5%BC%E6%A2%A6+%E6%9B%B9%E9%9B%AA%E8%8A%B9" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
                     <img src="https://covers.openlibrary.org/b/isbn/9787530212004-M.jpg" class="book-cover" alt="平凡的世界">
                     <div class="book-info">
                         <h4 class="book-title">平凡的世界</h4>
-                        <p class="book-meta">作者: 路遥 | 读书日期: 2025-06</p>
-                        <a href="https://item.jd.com/10011384.html" target="_blank" class="buy-link">京东购买</a>
+                        <p class="book-meta">作者：路遥<br>阅读日期：2025-06</p>
+                        <a href="https://search.jd.com/Search?keyword=%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C+%E8%B7%AF%E9%81%A5" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
                     <img src="https://covers.openlibrary.org/b/isbn/9787544253994-M.jpg" class="book-cover" alt="百年孤独">
                     <div class="book-info">
                         <h4 class="book-title">百年孤独</h4>
-                        <p class="book-meta">作者: 加西亚·马尔克斯 | 读书日期: 2025-05</p>
-                        <a href="https://item.jd.com/10011383.html" target="_blank" class="buy-link">京东购买</a>
+                        <p class="book-meta">作者：加西亚·马尔克斯<br>阅读日期：2025-05</p>
+                        <a href="https://search.jd.com/Search?keyword=%E7%99%BE%E5%B9%B4%E5%AD%A4%E7%8B%AC+%E5%8A%A0%E8%A5%BF%E4%BA%9A%C2%B7%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
                     <img src="https://covers.openlibrary.org/b/isbn/9787544270878-M.jpg" class="book-cover" alt="解忧杂货店">
                     <div class="book-info">
                         <h4 class="book-title">解忧杂货店</h4>
-                        <p class="book-meta">作者: 东野圭吾 | 读书日期: 2025-04</p>
-                        <a href="https://item.jd.com/10011382.html" target="_blank" class="buy-link">京东购买</a>
+                        <p class="book-meta">作者：东野圭吾<br>阅读日期：2025-04</p>
+                        <a href="https://search.jd.com/Search?keyword=%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97+%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
                     <img src="https://covers.openlibrary.org/b/isbn/9787208061644-M.jpg" class="book-cover" alt="追风筝的人">
                     <div class="book-info">
                         <h4 class="book-title">追风筝的人</h4>
-                        <p class="book-meta">作者: 卡勒德·胡赛尼 | 读书日期: 2025-03</p>
-                        <a href="https://item.jd.com/10011381.html" target="_blank" class="buy-link">京东购买</a>
+                        <p class="book-meta">作者：卡勒德·胡赛尼<br>阅读日期：2025-03</p>
+                        <a href="https://search.jd.com/Search?keyword=%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA+%E5%8D%A1%E5%8B%92%E5%BE%B7%C2%B7%E8%83%A1%E8%B5%9B%E5%B0%BC" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
                     <img src="https://covers.openlibrary.org/b/isbn/9787020042492-M.jpg" class="book-cover" alt="小王子">
                     <div class="book-info">
                         <h4 class="book-title">小王子</h4>
-                        <p class="book-meta">作者: 安托万·德·圣-埃克苏佩里 | 读书日期: 2025-02</p>
-                        <a href="https://item.jd.com/10011380.html" target="_blank" class="buy-link">京东购买</a>
+                        <p class="book-meta">作者：安托万·德·圣-埃克苏佩里<br>阅读日期：2025-02</p>
+                        <a href="https://search.jd.com/Search?keyword=%E5%B0%8F%E7%8E%8B%E5%AD%90+%E5%AE%89%E6%89%98%E4%B8%87%C2%B7%E5%BE%B7%C2%B7%E5%9C%A3-%E5%9F%83%E5%85%8B%E8%8B%8F%E4%BD%A9%E9%87%8C" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
                 <li class="book-entry">
                     <img src="https://covers.openlibrary.org/b/isbn/9787508647357-M.jpg" class="book-cover" alt="人类简史">
                     <div class="book-info">
                         <h4 class="book-title">人类简史</h4>
-                        <p class="book-meta">作者: 尤瓦尔·赫拉利 | 读书日期: 2025-01</p>
-                        <a href="https://item.jd.com/10011379.html" target="_blank" class="buy-link">京东购买</a>
+                        <p class="book-meta">作者：尤瓦尔·赫拉利<br>阅读日期：2025-01</p>
+                        <a href="https://search.jd.com/Search?keyword=%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2+%E5%B0%A4%E7%93%A6%E5%B0%94%C2%B7%E8%B5%AB%E6%8B%89%E5%88%A9" target="_blank" class="buy-link">京东购买链接</a>
                     </div>
                 </li>
             </ol>
