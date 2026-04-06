@@ -101,6 +101,51 @@
 .project-title { margin: 0; color: #34558b; font-size: 1.05rem; }
 .project-desc { font-size: 0.95rem; color: #555; margin: 5px 0; }
 
+/* 手风琴折叠样式 */
+.accordion-wrap {
+    position: relative;
+    margin-bottom: 20px;
+}
+.accordion-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+    margin: 0;
+}
+.year-header {
+    background-color: #f0f4f8;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1e293b;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.2s;
+}
+.accordion-wrap:hover .year-header {
+    background-color: #e2e8f0;
+}
+.caret-icon { transition: transform 0.3s; }
+
+/* 展开状态 */
+.accordion-checkbox:checked ~ .year-content { display: block; }
+.accordion-checkbox:checked ~ .year-header .caret-icon { transform: rotate(0deg); } /* caret down */
+
+/* 折叠状态 */
+.accordion-checkbox:not(:checked) ~ .year-content { display: none; }
+.accordion-checkbox:not(:checked) ~ .year-header .caret-icon { transform: rotate(-90deg); } /* caret right */
+
+.year-content {
+    padding-top: 15px; 
+}
+
 /* 书单 */
 .book-container { display: block; }
 .book-list {
