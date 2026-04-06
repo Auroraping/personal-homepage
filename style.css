@@ -200,3 +200,15 @@
     padding: 10px 0; 
     font-size: 12px;
 }
+.edu-item { margin-bottom: 20px; }
+.edu-title { margin: 0; color: #34558b; font-size: 1.1rem; display: flex; justify-content: space-between; }
+.edu-time { font-size: 0.9rem; color: #666; font-weight: normal; }
+.edu-desc { margin: 5px 0; font-size: 0.95rem; color: #444; }
+
+.custom-list { padding-left: 20px; margin: 10px 0; }
+.list-item { font-size: 0.95rem; color: #444; margin-bottom: 8px; line-height: 1.6; }
+
+.exp-item { margin-bottom: 25px; }
+.exp-title { margin: 0 0 10px 0; color: #34558b; font-size: 1.05rem; }
+
+.evaluation-text { font-size: 0.95rem; color: #444; line-height: 1.8; margin: 0; }

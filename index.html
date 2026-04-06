@@ -17,7 +17,7 @@
             <a href="#" class="nav-name">Lei Wang (王磊)</a>
             <div class="nav-links">
                 <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#experience">Experience</a>
+                <a class="nav-link" href="#education">Education</a>
                 <a class="nav-link" href="#projects">Projects</a>
                 <a class="nav-link" href="#reading">Reading</a>
             </div>
@@ -30,6 +30,18 @@
                 <img src="images/avatar.jpg" class="avatar-img" alt="avatar">
                 
                 <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="fa-solid fa-calendar contact-icon"></span>
+                        <span class="contact-text">2005-04</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="fa-solid fa-venus-mars contact-icon"></span>
+                        <span class="contact-text">男 · 汉族</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="fa-solid fa-location-dot contact-icon"></span>
+                        <span class="contact-text">四川 · 共青团员</span>
+                    </div>
                     <div class="contact-item">
                         <span class="fa-solid fa-envelope contact-icon"></span>
                         <span class="contact-text">3481618383@qq.com</span>
@@ -60,38 +72,90 @@
             </div>
         </div>
 
-        <div class="section-header" id="experience">News</div> 
-        <div class="card-body padding-left-20">
-            <p class="news-item">
-                <span class="font-bold highlight-text-dark">2026-01-01:</span> 
-                <span class="highlight-text-red">
-                    I am currently working as a <span class="font-bold">Python Data Analyst Intern</span> at <span class="font-bold">Yijing Technology (移景科技)</span>. 
-                    My work focuses on engineering automated ETL pipelines and developing real-time BI dashboards to enhance decision-making efficiency.
-                </span>
-            </p>
-
-            <p class="news-item">
-                <span class="font-bold highlight-text-dark">2025-12-15:</span> 
-                Successfully completed the <span class="font-bold">Walmart M5 Forecasting</span> project, achieving an R² of 0.96 by utilizing 
-                LightGBM and Tweedie Loss to handle long-tail retail distributions.
-            </p>
-
-            <p class="news-item">
-                <span class="font-bold highlight-text-dark">2025-11-01:</span> 
-                Started the SRTP project "Blood Center Inventory Decision System," developing a <span class="font-bold">Joint Estimation and Optimization (JEO)</span> 
-                framework to balance expiration risks and shortage costs.
+        <div class="section-header" id="evaluation">自我评价 (Self Evaluation)</div>
+        <div class="card-body">
+            <p class="evaluation-text">
+                具备扎实的专业基础，掌握Python编程、机器学习、数据库等相关技术，拥有丰富的项目实践经历，具备较强的代码实现能力与问题解决能力。在校期间担任多项学生职务，具备良好的团队协作、沟通协调与组织管理能力。工作态度认真负责，学习能力强，能快速适应新环境与新任务，积极主动完成各项工作，期待在寒假实习中积累实践经验，提升专业技能。
             </p>
         </div>
 
-        <div class="section-header" id="projects">Selected Projects</div>
+        <div class="section-header" id="education">教育背景 (Education)</div>
+        <div class="card-body">
+            <div class="edu-item">
+                <h4 class="edu-title">浙江大学 (Zhejiang University) <span class="edu-time">2023-09 ~ 至今</span></h4>
+                <p class="edu-desc">信息管理与信息系统（本科）</p>
+                <p class="edu-desc"><span class="font-bold">核心课程:</span> Python、C语言、商务数据挖掘、数据库技术、运筹学、管理统计</p>
+            </div>
+        </div>
+
+        <div class="section-header" id="skills">专业技能 (Professional Skills)</div>
+        <div class="card-body">
+            <ul class="custom-list">
+                <li class="list-item"><span class="font-bold">编程语言:</span> Python (Pandas, NumPy, Scikit-learn, PyTorch), SQL (熟练掌握多表查询、窗口函数、子查询), MATLAB</li>
+                <li class="list-item"><span class="font-bold">数据分析与挖掘:</span> 掌握随机森林、LightGBM、LSTM等机器学习算法; 熟悉A/B Test实验设计; 具备良好的特征工程与EDA(探索性数据分析)能力</li>
+                <li class="list-item"><span class="font-bold">数据可视化:</span> Matplotlib, Seaborn, Tableau/PowerBI</li>
+                <li class="list-item"><span class="font-bold">通用技能:</span> 英文文献阅读能力, Latex论文排版, 数学建模</li>
+            </ul>
+        </div>
+
+        <div class="section-header" id="projects">项目经历 (Project Experience)</div>
         <div class="card-body">
             <div class="project-item">
-                <h4 class="project-title">Walmart M5 Forecasting & Inventory Optimization</h4>
-                <p class="project-desc">Analyzed 1,913 days of sales data to predict future demand. Utilized <span class="font-bold">LightGBM</span> and <span class="font-bold">Tweedie Loss</span> to handle long-tail distributions, achieving an R² of 0.96 at the aggregate level.</p>
+                <h4 class="project-title">1. Walmart M5 零售销量预测与库存优化分析 (课程项目 | 核心负责人)</h4>
+                <ul class="custom-list">
+                    <li class="list-item"><span class="font-bold">项目背景:</span> 基于沃尔玛3个州10家门店的1913天历史销售数据，预测未来28天的分层级销量，以优化库存管理。</li>
+                    <li class="list-item"><span class="font-bold">数据清洗与EDA:</span> 使用 Python (Pandas) 处理百万级长尾数据，通过帕累托分析发现前35%商品贡献80%销量，识别出“零销量”间歇性特征。定量分析发现SNAP福利日使销量提升约12.08%，为特征工程提供业务依据。</li>
+                    <li class="list-item"><span class="font-bold">特征工程与建模:</span> 构建了滞后特征(Lag)、滚动统计特征(Rolling Mean/Std)及日历事件特征。对比LightGBM与Seq2Seq LSTM模型，利用Tweedie损失函数处理数据长尾分布问题。</li>
+                    <li class="list-item"><span class="font-bold">分析成果:</span> 最终模型在聚合层级(Total)达到 R²=0.96，WAPE低至4%。最终提出针对周末高峰备货及核心SKU聚焦的供应链优化建议。</li>
+                </ul>
             </div>
             <div class="project-item">
-                <h4 class="project-title">Blood Center Inventory Decision System (SRTP)</h4>
-                <p class="project-desc">Developed a <span class="font-bold">Joint Estimation and Optimization (JEO)</span> framework to balance expiration risks and shortage costs for Grade-A hospital blood centers.</p>
+                <h4 class="project-title">2. 医院血液中心库存决策优化系统 (SRTP科研训练 | 核心成员)</h4>
+                <ul class="custom-list">
+                    <li class="list-item"><span class="font-bold">业务背景:</span> 针对三甲医院血液中心“过期浪费”与“缺货短缺”的双重风险，探索基于数据驱动的库存订货策略。</li>
+                    <li class="list-item"><span class="font-bold">模型构建:</span> 设计了SEO(先预测后优化)与JEO(端到端联合优化)两套方案。在JEO方案中，基于DeepSets架构设计神经网络，直接从历史申请数据映射到最优订货量。</li>
+                    <li class="list-item"><span class="font-bold">策略评估:</span> 引入报童模型(Newsvendor Loss)作为损失函数，通过tau参数化模拟不同缺货/积压成本权重。</li>
+                    <li class="list-item"><span class="font-bold">结果量化:</span> 实验表明，端到端优化(JEO)在业务成本控制上显著优于传统“先预测后优化”方法，并引入Prescriptive Power指标验证了模型相比SAA方法的决策质量提升。</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h4 class="project-title">3. Shopee 商品同款图像/文本检索系统 (项目成员 | 算法与策略分析)</h4>
+                <ul class="custom-list">
+                    <li class="list-item"><span class="font-bold">项目目标:</span> 解决电商场景下商品“同款不同图”的检索难题，提升搜索匹配准确率。</li>
+                    <li class="list-item"><span class="font-bold">多模态分析:</span> 基于CLIP模型提取图像与文本特征。通过消融实验(Ablation Study)定量分析发现，电商场景下文本特征(标题、品牌)的判别力优于纯图像特征。</li>
+                    <li class="list-item"><span class="font-bold">策略优化:</span> 设计了“冻结编码器 + ArcFace微调”的训练策略，解决了微调过程中的特征塌陷问题。确定了40%图像 + 60%文本的最优加权融合策略。</li>
+                    <li class="list-item"><span class="font-bold">最终产出:</span> 系统检索准确率(mAP@50)从基准的0.659提升至0.896(提升35.9%)，显著优化了商品匹配效率。</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h4 class="project-title">4. 数学建模竞赛 代码实现负责人</h4>
+                <ul class="custom-list">
+                    <li class="list-item">负责赛题的数学模型转化为计算机代码(Python)，进行数据预处理、模型求解及灵敏度分析，撰写论文中的模型求解与结果分析章节。</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-header" id="campus">校园经历 (Campus Experience)</div>
+        <div class="card-body">
+            <div class="exp-item">
+                <h4 class="exp-title">1. 浙江大学心理健康协会</h4>
+                <ul class="custom-list">
+                    <li class="list-item">参与协会组织的心理健康科普宣传、心理互助活动策划与执行，具备良好的沟通表达能力</li>
+                </ul>
+            </div>
+            <div class="exp-item">
+                <h4 class="exp-title">2. 浙江大学管理学院党素培训部</h4>
+                <ul class="custom-list">
+                    <li class="list-item">系统学习党的理论知识与方针政策，参与党性修养实践活动，提升思想政治觉悟与责任担当意识</li>
+                    <li class="list-item">完成培训期间的学习任务与考核，撰写学习心得，强化服务意识与团队协作精神</li>
+                </ul>
+            </div>
+            <div class="exp-item">
+                <h4 class="exp-title">3. 班级副班长、心理委员</h4>
+                <ul class="custom-list">
+                    <li class="list-item">协助班长完成班级日常管理、活动组织与信息传达工作，协调班级同学关系，营造良好班级氛围</li>
+                    <li class="list-item">履行心理委员职责，关注班级同学心理健康状况，协助学院开展心理健康相关工作，保障班级同学身心健康</li>
+                </ul>
             </div>
         </div>
 
