@@ -132,7 +132,12 @@
 .accordion-wrap:hover .year-header {
     background-color: #e2e8f0;
 }
-.caret-icon { transition: transform 0.3s; }
+.caret-icon { 
+    transition: transform 0.3s; 
+    display: inline-block;
+    color: #475569;
+    font-size: 0.85em;
+}
 
 /* 展开状态 */
 .accordion-checkbox:checked ~ .year-content { display: block; }
