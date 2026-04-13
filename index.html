@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
+
 <body class="body-element">
 
     <div id="top" class="top-anchor"></div>
@@ -25,10 +27,10 @@
     </div>
 
     <div id="app" class="app-container">
-       <div class="header-section" id="about">
+        <div class="header-section" id="about">
             <div class="avatar-wrap">
                 <img src="images/avatar.jpg" class="avatar-img" alt="avatar">
-                
+
                 <div class="contact-info">
                     <div class="contact-item">
                         <span class="fa-solid fa-calendar contact-icon"></span>
@@ -59,16 +61,41 @@
 
             <div class="info-wrap">
                 <p class="intro-p">
-                    <span class="font-bold">Lei Wang (王磊)</span> is currently an undergraduate student at the  
-                    <a href="http://www.som.zju.edu.cn/" target="_blank" class="som-link">School of Management, Zhejiang University</a> (ZJU), 
-                    majoring in Information Management and Information Systems. His research interests include 
-                    <span class="font-bold">Python Data Science</span>, Supply Chain Optimization, and Financial Engineering.
+                    <span class="font-bold">Lei Wang (王磊)</span> is currently an undergraduate student at the
+                    <a href="http://www.som.zju.edu.cn/" target="_blank" class="som-link">School of Management, Zhejiang
+                        University</a> (ZJU),
+                    majoring in Information Management and Information Systems. His research interests include
+                    <span class="font-bold">Python Data Science</span>, Supply Chain Optimization, and Financial
+                    Engineering.
                 </p>
                 <p class="intro-p margin-top-15">
-                    He is also a multi-instrumentalist who plays 
-                    <span class="font-bold">Guitar, Drums, and Pipa</span>. He enjoys the intersection of 
+                    He is also a multi-instrumentalist who plays
+                    <span class="font-bold">Guitar, Drums, and Pipa</span>. He enjoys the intersection of
                     rigorous data logic and artistic creativity.
                 </p>
+
+                <div class="lifestyle-section">
+                    <div class="lifestyle-title">
+                        <i class="fa-solid fa-mug-hot"></i> 生活志 (Lifestyle)
+                    </div>
+                    <div class="lifestyle-grid">
+                        <div class="lifestyle-card card-sichuan">
+                            <span class="icon">🐼</span>
+                            <span class="label">四川血统</span>
+                            <span class="desc">生于巴蜀，自带火锅基因，性格爽利。</span>
+                        </div>
+                        <div class="lifestyle-card card-spicy">
+                            <span class="icon">🌶️</span>
+                            <span class="label">无辣不欢</span>
+                            <span class="desc">对辣椒有极高忠诚度，认为美食的灵魂在于红油。</span>
+                        </div>
+                        <div class="lifestyle-card card-mahjong">
+                            <span class="icon">🀄</span>
+                            <span class="label">雀魂研究员</span>
+                            <span class="desc">致力于研究马尔可夫链在成都麻将中的实战应用。</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -91,8 +118,10 @@
         <div class="section-header" id="skills">专业技能 (Professional Skills)</div>
         <div class="card-body">
             <ul class="custom-list">
-                <li class="list-item"><span class="font-bold">编程语言:</span> Python (Pandas, NumPy, Scikit-learn, PyTorch), SQL (熟练掌握多表查询、窗口函数、子查询), MATLAB</li>
-                <li class="list-item"><span class="font-bold">数据分析与挖掘:</span> 掌握随机森林、LightGBM、LSTM等机器学习算法; 熟悉A/B Test实验设计; 具备良好的特征工程与EDA(探索性数据分析)能力</li>
+                <li class="list-item"><span class="font-bold">编程语言:</span> Python (Pandas, NumPy, Scikit-learn,
+                    PyTorch), SQL (熟练掌握多表查询、窗口函数、子查询), MATLAB</li>
+                <li class="list-item"><span class="font-bold">数据分析与挖掘:</span> 掌握随机森林、LightGBM、LSTM等机器学习算法; 熟悉A/B
+                    Test实验设计; 具备良好的特征工程与EDA(探索性数据分析)能力</li>
                 <li class="list-item"><span class="font-bold">数据可视化:</span> Matplotlib, Seaborn, Tableau/PowerBI</li>
                 <li class="list-item"><span class="font-bold">通用技能:</span> 英文文献阅读能力, Latex论文排版, 数学建模</li>
             </ul>
@@ -103,28 +132,39 @@
             <div class="project-item">
                 <h4 class="project-title">1. Walmart M5 零售销量预测与库存优化分析 (课程项目 | 核心负责人)</h4>
                 <ul class="custom-list">
-                    <li class="list-item"><span class="font-bold">项目背景:</span> 基于沃尔玛3个州10家门店的1913天历史销售数据，预测未来28天的分层级销量，以优化库存管理。</li>
-                    <li class="list-item"><span class="font-bold">数据清洗与EDA:</span> 使用 Python (Pandas) 处理百万级长尾数据，通过帕累托分析发现前35%商品贡献80%销量，识别出“零销量”间歇性特征。定量分析发现SNAP福利日使销量提升约12.08%，为特征工程提供业务依据。</li>
-                    <li class="list-item"><span class="font-bold">特征工程与建模:</span> 构建了滞后特征(Lag)、滚动统计特征(Rolling Mean/Std)及日历事件特征。对比LightGBM与Seq2Seq LSTM模型，利用Tweedie损失函数处理数据长尾分布问题。</li>
-                    <li class="list-item"><span class="font-bold">分析成果:</span> 最终模型在聚合层级(Total)达到 R²=0.96，WAPE低至4%。最终提出针对周末高峰备货及核心SKU聚焦的供应链优化建议。</li>
+                    <li class="list-item"><span class="font-bold">项目背景:</span>
+                        基于沃尔玛3个州10家门店的1913天历史销售数据，预测未来28天的分层级销量，以优化库存管理。</li>
+                    <li class="list-item"><span class="font-bold">数据清洗与EDA:</span> 使用 Python (Pandas)
+                        处理百万级长尾数据，通过帕累托分析发现前35%商品贡献80%销量，识别出“零销量”间歇性特征。定量分析发现SNAP福利日使销量提升约12.08%，为特征工程提供业务依据。</li>
+                    <li class="list-item"><span class="font-bold">特征工程与建模:</span> 构建了滞后特征(Lag)、滚动统计特征(Rolling
+                        Mean/Std)及日历事件特征。对比LightGBM与Seq2Seq LSTM模型，利用Tweedie损失函数处理数据长尾分布问题。</li>
+                    <li class="list-item"><span class="font-bold">分析成果:</span> 最终模型在聚合层级(Total)达到
+                        R²=0.96，WAPE低至4%。最终提出针对周末高峰备货及核心SKU聚焦的供应链优化建议。</li>
                 </ul>
             </div>
             <div class="project-item">
                 <h4 class="project-title">2. 医院血液中心库存决策优化系统 (SRTP科研训练 | 核心成员)</h4>
                 <ul class="custom-list">
-                    <li class="list-item"><span class="font-bold">业务背景:</span> 针对三甲医院血液中心“过期浪费”与“缺货短缺”的双重风险，探索基于数据驱动的库存订货策略。</li>
-                    <li class="list-item"><span class="font-bold">模型构建:</span> 设计了SEO(先预测后优化)与JEO(端到端联合优化)两套方案。在JEO方案中，基于DeepSets架构设计神经网络，直接从历史申请数据映射到最优订货量。</li>
-                    <li class="list-item"><span class="font-bold">策略评估:</span> 引入报童模型(Newsvendor Loss)作为损失函数，通过tau参数化模拟不同缺货/积压成本权重。</li>
-                    <li class="list-item"><span class="font-bold">结果量化:</span> 实验表明，端到端优化(JEO)在业务成本控制上显著优于传统“先预测后优化”方法，并引入Prescriptive Power指标验证了模型相比SAA方法的决策质量提升。</li>
+                    <li class="list-item"><span class="font-bold">业务背景:</span>
+                        针对三甲医院血液中心“过期浪费”与“缺货短缺”的双重风险，探索基于数据驱动的库存订货策略。</li>
+                    <li class="list-item"><span class="font-bold">模型构建:</span>
+                        设计了SEO(先预测后优化)与JEO(端到端联合优化)两套方案。在JEO方案中，基于DeepSets架构设计神经网络，直接从历史申请数据映射到最优订货量。</li>
+                    <li class="list-item"><span class="font-bold">策略评估:</span> 引入报童模型(Newsvendor
+                        Loss)作为损失函数，通过tau参数化模拟不同缺货/积压成本权重。</li>
+                    <li class="list-item"><span class="font-bold">结果量化:</span>
+                        实验表明，端到端优化(JEO)在业务成本控制上显著优于传统“先预测后优化”方法，并引入Prescriptive Power指标验证了模型相比SAA方法的决策质量提升。</li>
                 </ul>
             </div>
             <div class="project-item">
                 <h4 class="project-title">3. Shopee 商品同款图像/文本检索系统 (项目成员 | 算法与策略分析)</h4>
                 <ul class="custom-list">
                     <li class="list-item"><span class="font-bold">项目目标:</span> 解决电商场景下商品“同款不同图”的检索难题，提升搜索匹配准确率。</li>
-                    <li class="list-item"><span class="font-bold">多模态分析:</span> 基于CLIP模型提取图像与文本特征。通过消融实验(Ablation Study)定量分析发现，电商场景下文本特征(标题、品牌)的判别力优于纯图像特征。</li>
-                    <li class="list-item"><span class="font-bold">策略优化:</span> 设计了“冻结编码器 + ArcFace微调”的训练策略，解决了微调过程中的特征塌陷问题。确定了40%图像 + 60%文本的最优加权融合策略。</li>
-                    <li class="list-item"><span class="font-bold">最终产出:</span> 系统检索准确率(mAP@50)从基准的0.659提升至0.896(提升35.9%)，显著优化了商品匹配效率。</li>
+                    <li class="list-item"><span class="font-bold">多模态分析:</span> 基于CLIP模型提取图像与文本特征。通过消融实验(Ablation
+                        Study)定量分析发现，电商场景下文本特征(标题、品牌)的判别力优于纯图像特征。</li>
+                    <li class="list-item"><span class="font-bold">策略优化:</span> 设计了“冻结编码器 +
+                        ArcFace微调”的训练策略，解决了微调过程中的特征塌陷问题。确定了40%图像 + 60%文本的最优加权融合策略。</li>
+                    <li class="list-item"><span class="font-bold">最终产出:</span>
+                        系统检索准确率(mAP@50)从基准的0.659提升至0.896(提升35.9%)，显著优化了商品匹配效率。</li>
                 </ul>
             </div>
             <div class="project-item">
@@ -161,7 +201,7 @@
 
         <div class="section-header" id="reading">Reading List (Top 10)</div>
         <div class="book-container">
-            
+
             <div class="accordion-wrap">
                 <input type="checkbox" class="accordion-checkbox" checked>
                 <div class="year-header">
@@ -178,7 +218,8 @@
                                     <span class="meta-author">作者：余华</span>
                                     <span class="meta-date">阅读日期：2025-10</span>
                                 </div>
-                                <a href="https://search.jd.com/Search?keyword=%E6%B4%BB%E7%9D%80+%E4%BD%99%E5%8D%8E" target="_blank" class="buy-link">京东购买链接</a>
+                                <a href="https://search.jd.com/Search?keyword=%E6%B4%BB%E7%9D%80+%E4%BD%99%E5%8D%8E"
+                                    target="_blank" class="buy-link">京东购买链接</a>
                             </div>
                         </li>
                         <li class="book-entry">
@@ -189,7 +230,8 @@
                                     <span class="meta-author">作者：钱钟书</span>
                                     <span class="meta-date">阅读日期：2025-09</span>
                                 </div>
-                                <a href="https://search.jd.com/Search?keyword=%E5%9B%B4%E5%9F%8E+%E9%92%B1%E9%92%9F%E4%B9%A6" target="_blank" class="buy-link">京东购买链接</a>
+                                <a href="https://search.jd.com/Search?keyword=%E5%9B%B4%E5%9F%8E+%E9%92%B1%E9%92%9F%E4%B9%A6"
+                                    target="_blank" class="buy-link">京东购买链接</a>
                             </div>
                         </li>
                         <li class="book-entry">
@@ -200,7 +242,8 @@
                                     <span class="meta-author">作者：刘慈欣</span>
                                     <span class="meta-date">阅读日期：2025-08</span>
                                 </div>
-                                <a href="https://search.jd.com/Search?keyword=%E4%B8%89%E4%BD%93+%E5%88%98%E6%85%88%E6%AC%A3" target="_blank" class="buy-link">京东购买链接</a>
+                                <a href="https://search.jd.com/Search?keyword=%E4%B8%89%E4%BD%93+%E5%88%98%E6%85%88%E6%AC%A3"
+                                    target="_blank" class="buy-link">京东购买链接</a>
                             </div>
                         </li>
                         <li class="book-entry">
@@ -211,7 +254,8 @@
                                     <span class="meta-author">作者：曹雪芹</span>
                                     <span class="meta-date">阅读日期：2025-07</span>
                                 </div>
-                                <a href="https://search.jd.com/Search?keyword=%E7%BA%A2%E6%A5%BC%E6%A2%A6+%E6%9B%B9%E9%9B%AA%E8%8A%B9" target="_blank" class="buy-link">京东购买链接</a>
+                                <a href="https://search.jd.com/Search?keyword=%E7%BA%A2%E6%A5%BC%E6%A2%A6+%E6%9B%B9%E9%9B%AA%E8%8A%B9"
+                                    target="_blank" class="buy-link">京东购买链接</a>
                             </div>
                         </li>
                         <li class="book-entry">
@@ -222,7 +266,8 @@
                                     <span class="meta-author">作者：路遥</span>
                                     <span class="meta-date">阅读日期：2025-06</span>
                                 </div>
-                                <a href="https://search.jd.com/Search?keyword=%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C+%E8%B7%AF%E9%81%A5" target="_blank" class="buy-link">京东购买链接</a>
+                                <a href="https://search.jd.com/Search?keyword=%E5%B9%B3%E5%87%A1%E7%9A%84%E4%B8%96%E7%95%8C+%E8%B7%AF%E9%81%A5"
+                                    target="_blank" class="buy-link">京东购买链接</a>
                             </div>
                         </li>
                     </ol>
@@ -245,7 +290,8 @@
                                     <span class="meta-author">作者：加西亚·马尔克斯</span>
                                     <span class="meta-date">阅读日期：2024-12</span>
                                 </div>
-                                <a href="https://search.jd.com/Search?keyword=%E7%99%BE%E5%B9%B4%E5%AD%A4%E7%8B%AC+%E5%8A%A0%E8%A5%BF%E4%BA%9A%C2%B7%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF" target="_blank" class="buy-link">京东购买链接</a>
+                                <a href="https://search.jd.com/Search?keyword=%E7%99%BE%E5%B9%B4%E5%AD%A4%E7%8B%AC+%E5%8A%A0%E8%A5%BF%E4%BA%9A%C2%B7%E9%A9%AC%E5%B0%94%E5%85%8B%E6%96%AF"
+                                    target="_blank" class="buy-link">京东购买链接</a>
                             </div>
                         </li>
                         <li class="book-entry">
@@ -256,7 +302,8 @@
                                     <span class="meta-author">作者：东野圭吾</span>
                                     <span class="meta-date">阅读日期：2024-11</span>
                                 </div>
-                                <a href="https://search.jd.com/Search?keyword=%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97+%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE" target="_blank" class="buy-link">京东购买链接</a>
+                                <a href="https://search.jd.com/Search?keyword=%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97+%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE"
+                                    target="_blank" class="buy-link">京东购买链接</a>
                             </div>
                         </li>
                         <li class="book-entry">
@@ -267,7 +314,8 @@
                                     <span class="meta-author">作者：卡勒德·胡赛尼</span>
                                     <span class="meta-date">阅读日期：2024-10</span>
                                 </div>
-                                <a href="https://search.jd.com/Search?keyword=%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA+%E5%8D%A1%E5%8B%92%E5%BE%B7%C2%B7%E8%83%A1%E8%B5%9B%E5%B0%BC" target="_blank" class="buy-link">京东购买链接</a>
+                                <a href="https://search.jd.com/Search?keyword=%E8%BF%BD%E9%A3%8E%E7%AD%9D%E7%9A%84%E4%BA%BA+%E5%8D%A1%E5%8B%92%E5%BE%B7%C2%B7%E8%83%A1%E8%B5%9B%E5%B0%BC"
+                                    target="_blank" class="buy-link">京东购买链接</a>
                             </div>
                         </li>
                         <li class="book-entry">
@@ -278,7 +326,8 @@
                                     <span class="meta-author">作者：安托万·德·圣-埃克苏佩里</span>
                                     <span class="meta-date">阅读日期：2024-09</span>
                                 </div>
-                                <a href="https://search.jd.com/Search?keyword=%E5%B0%8F%E7%8E%8B%E5%AD%90+%E5%AE%89%E6%89%98%E4%B8%87%C2%B7%E5%BE%B7%C2%B7%E5%9C%A3-%E5%9F%83%E5%85%8B%E8%8B%8F%E4%BD%A9%E9%87%8C" target="_blank" class="buy-link">京东购买链接</a>
+                                <a href="https://search.jd.com/Search?keyword=%E5%B0%8F%E7%8E%8B%E5%AD%90+%E5%AE%89%E6%89%98%E4%B8%87%C2%B7%E5%BE%B7%C2%B7%E5%9C%A3-%E5%9F%83%E5%85%8B%E8%8B%8F%E4%BD%A9%E9%87%8C"
+                                    target="_blank" class="buy-link">京东购买链接</a>
                             </div>
                         </li>
                         <li class="book-entry">
@@ -289,13 +338,14 @@
                                     <span class="meta-author">作者：尤瓦尔·赫拉利</span>
                                     <span class="meta-date">阅读日期：2024-08</span>
                                 </div>
-                                <a href="https://search.jd.com/Search?keyword=%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2+%E5%B0%A4%E7%93%A6%E5%B0%94%C2%B7%E8%B5%AB%E6%8B%89%E5%88%A9" target="_blank" class="buy-link">京东购买链接</a>
+                                <a href="https://search.jd.com/Search?keyword=%E4%BA%BA%E7%B1%BB%E7%AE%80%E5%8F%B2+%E5%B0%A4%E7%93%A6%E5%B0%94%C2%B7%E8%B5%AB%E6%8B%89%E5%88%A9"
+                                    target="_blank" class="buy-link">京东购买链接</a>
                             </div>
                         </li>
                     </ol>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
@@ -308,4 +358,5 @@
     </div>
 
 </body>
+
 </html>

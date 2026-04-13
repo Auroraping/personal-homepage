@@ -259,3 +259,95 @@
 .exp-title { margin: 0 0 10px 0; color: #34558b; font-size: 1.05rem; }
 
 .evaluation-text { font-size: 0.95rem; color: #444; line-height: 1.8; margin: 0; }
+
+/* 生活志样式 */
+.lifestyle-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.lifestyle-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #34558b;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lifestyle-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, #34558b, transparent);
+    margin-left: 10px;
+}
+
+.lifestyle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.lifestyle-card {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+    position: relative;
+    overflow: hidden;
+}
+
+.lifestyle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: #34558b;
+}
+
+.lifestyle-card .icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.lifestyle-card .label {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.lifestyle-card .desc {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    line-height: 1.4;
+}
+
+.lifestyle-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #34558b;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lifestyle-card:hover::before {
+    opacity: 1;
+}
+
+/* 特定颜色 */
+.card-spicy:hover { border-color: #e63946; }
+.card-spicy:hover::before { background: #e63946; }
+.card-mahjong:hover { border-color: #2a9d8f; }
+.card-mahjong:hover::before { background: #2a9d8f; }
+.card-sichuan:hover { border-color: #f4a261; }
+.card-sichuan:hover::before { background: #f4a261; }
