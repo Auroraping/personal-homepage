@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Lei Wang | Zhejiang University</title>
     <script src="https://kit.fontawesome.com/805ab53803.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 
@@ -349,14 +349,111 @@
         </div>
     </div>
 
+    <div class="zen-entry">
+        <button class="zen-btn" onclick="openGame()">开启一次动态冥想 (Begin Meditation)</button>
+    </div>
+
     <div class="footer-action">
         <a href="#top" class="back-to-top">回到顶部</a>
+    </div>
+
+    <!-- 游戏叠加层 -->
+    <div class="game-overlay" id="gameOverlay">
+        <span class="close-game" onclick="closeGame()">&times;</span>
+        <h2 class="game-title">禅意追踪 (Zen Match)</h2>
+        <div class="game-grid" id="gameGrid"></div>
+        <div class="game-message" id="gameMessage">在静谧中搜寻对应的符号，找回内心的平衡。</div>
     </div>
 
     <div class="site-footer">
         Copyright © 2026 Lei Wang. All Rights Reserved. | Zhejiang University
     </div>
 
+    <script>
+        const symbols = ['🐼', '🌶️', '🀄', '🎸', '🥁', '📊', '💻', '🎓'];
+        let cards = [...symbols, ...symbols];
+        let flippedCards = [];
+        let matchedPairs = 0;
+        let isLock = false;
+
+        function shuffle(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        function createCard(symbol) {
+            const card = document.createElement('div');
+            card.className = 'memory-card';
+            card.innerHTML = `
+                <div class="card-back"><i class="fa-solid fa-leaf"></i></div>
+                <div class="card-front">${symbol}</div>
+            `;
+            card.onclick = () => flipCard(card, symbol);
+            return card;
+        }
+
+        function openGame() {
+            const overlay = document.getElementById('gameOverlay');
+            const grid = document.getElementById('gameGrid');
+            const message = document.getElementById('gameMessage');
+            
+            grid.innerHTML = '';
+            matchedPairs = 0;
+            flippedCards = [];
+            isLock = false;
+            message.innerText = '在静谧中搜寻对应的符号，找回内心的平衡。';
+            
+            shuffle(cards).forEach(symbol => {
+                grid.appendChild(createCard(symbol));
+            });
+            
+            overlay.style.display = 'flex';
+            setTimeout(() => overlay.classList.add('active'), 10);
+        }
+
+        function closeGame() {
+            const overlay = document.getElementById('gameOverlay');
+            overlay.classList.remove('active');
+            setTimeout(() => overlay.style.display = 'none', 500);
+        }
+
+        function flipCard(card, symbol) {
+            if (isLock || card.classList.contains('flip') || flippedCards.includes(card)) return;
+
+            card.classList.add('flip');
+            flippedCards.push({ card, symbol });
+
+            if (flippedCards.length === 2) {
+                isLock = true;
+                checkMatch();
+            }
+        }
+
+        function checkMatch() {
+            const [first, second] = flippedCards;
+            if (first.symbol === second.symbol) {
+                matchedPairs++;
+                flippedCards = [];
+                isLock = false;
+                if (matchedPairs === symbols.length) {
+                    setTimeout(() => {
+                        document.getElementById('gameMessage').innerHTML = 
+                            "<strong>圆满完成了。</strong><br>在喧嚣的数据森林中，你依然保持着对生活细微美好的精准捕捉。";
+                    }, 600);
+                }
+            } else {
+                setTimeout(() => {
+                    first.card.classList.remove('flip');
+                    second.card.classList.remove('flip');
+                    flippedCards = [];
+                    isLock = false;
+                }, 1000);
+            }
+        }
+    </script>
 </body>
 
 </html>

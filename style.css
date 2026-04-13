@@ -1,27 +1,54 @@
-/* 全局基础设置 */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --bg-main: #ffffff;
+    --bg-secondary: #fbfbfd;
+    --text-primary: #1d1d1f;
+    --text-secondary: #6e6e73;
+    --accent: #34558b; /* ZJU Blue */
+    --accent-light: #eef2f8;
+    --border-soft: #e2e8f0;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 基础重置 */
 .body-element {
-    font-family: 'ZCOOL XiaoWei', Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    color: #2c3e50;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
     margin: 0;
-    background-color: #fcfcfc;
-    line-height: 1.6;
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
 
-.top-anchor {
-    display: block;
+h1, h2, h3, h4, .nav-name, .section-header {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.02em;
 }
 
+/* 顶部锚点 */
+.top-anchor { display: block; }
+
+/* 导航栏 - 极简白 */
 .nav-bar {
-    background-color: rgba(52, 85, 139, 0.9);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-soft);
     position: sticky;
     top: 0;
     z-index: 1000;
     width: 100%;
+    transition: var(--transition-smooth);
 }
 
 .nav-container {
-    width: 70%;
+    width: 85%;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -29,325 +56,384 @@
     padding: 12px 0;
 }
 
-@media (max-width: 1080px) { 
-    .nav-container { width: 95%; } 
-    .app-container { width: 100% !important; }
-    .site-footer { width: 100% !important; }
-}
-
 .nav-name {
-    color: white;
-    font-size: 20px;
-    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
     text-decoration: none;
+    letter-spacing: -0.5px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
+.nav-links { display: flex; gap: 32px; }
 
 .nav-link {
-    color: white !important;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.app-container {
-    width: 70%;
-    margin: 0 auto;
-    background: white;
-    padding: 0 4.7vw 50px;
-    box-sizing: border-box;
-}
-
-.header-section {
-    display: flex;
-    padding: 50px 0;
-    gap: 40px;
-    border-bottom: 1px dashed #bdd3e8;
-}
-
-.avatar-wrap { flex: 0 0 180px; text-align: center; }
-.avatar-img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 3px solid #f0f4fa; }
-
-.info-wrap { flex: 1; text-align: left; font-size: 1rem; color: #333; line-height: 1.6; }
-.intro-p { margin-top: 0; margin-bottom: 15px; }
-.margin-top-15 { margin-top: 15px; }
-.font-bold { font-weight: bold; }
-.som-link { color: #333; text-decoration: underline; }
-
-.contact-info { margin-top: 20px; text-align: left; padding-left: 10px; }
-.contact-item { font-size: 14px; color: #666; margin-bottom: 8px; display: flex; align-items: center; }
-.contact-item-last { font-size: 14px; color: #666; display: flex; align-items: center; }
-.contact-icon { width: 20px; color: #34558b; display: inline-block; }
-.contact-text { margin-left: 8px; }
-
-.section-header {
-    font-size: 18px; font-weight: 700; text-align: left;
-    background: #f0f4fa; padding: 10px 20px; border-radius: 8px;
-    margin: 30px 0 15px;
-}
-
-.card-body { text-align: left; padding: 0 15px; }
-.padding-left-20 { padding-left: 20px; border: none; }
-
-.news-item { margin-bottom: 15px; line-height: 1.5; color: #333; }
-.highlight-text-dark { color: #333; }
-.highlight-text-red { color: #cb181d; }
-
-.project-item { margin-bottom: 25px; }
-.project-title { margin: 0; color: #34558b; font-size: 1.05rem; }
-.project-desc { font-size: 0.95rem; color: #555; margin: 5px 0; }
-
-/* 手风琴折叠样式 */
-.accordion-wrap {
-    position: relative;
-    margin-bottom: 20px;
-}
-.accordion-checkbox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 52px;
-    opacity: 0;
-    cursor: pointer;
-    z-index: 10;
-    margin: 0;
-}
-.year-header {
-    background-color: #f0f4f8;
-    padding: 15px 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #1e293b;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: background-color 0.2s;
-}
-.accordion-wrap:hover .year-header {
-    background-color: #e2e8f0;
-}
-.caret-icon { 
-    transition: transform 0.3s; 
-    display: inline-block;
-    color: #475569;
-    font-size: 0.85em;
-}
-
-/* 展开状态 */
-.accordion-checkbox:checked ~ .year-content { display: block; }
-.accordion-checkbox:checked ~ .year-header .caret-icon { transform: rotate(0deg); } /* caret down */
-
-/* 折叠状态 */
-.accordion-checkbox:not(:checked) ~ .year-content { display: none; }
-.accordion-checkbox:not(:checked) ~ .year-header .caret-icon { transform: rotate(-90deg); } /* caret right */
-
-.year-content {
-    padding-top: 15px; 
-}
-
-/* 书单 */
-.book-container { display: block; }
-.book-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 0;
-    list-style: none;
-    margin: 0;
-}
-.book-entry {
-    display: flex;
-    flex-direction: row;
-    padding: 20px;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    background: #fff;
-    align-items: flex-start;
-    gap: 24px;
-    box-sizing: border-box;
-}
-.book-cover {
-    width: 140px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 4px;
-    flex-shrink: 0;
-}
-.book-info {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: flex-start;
-}
-.book-title {
-    margin: 0 0 10px 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2c5282;
-    text-align: left;
-}
-.book-meta {
-    font-size: 1rem;
-    color: #4a5568;
-    line-height: 1.6;
-    text-align: left;
-    margin-bottom: 20px;
-}
-.meta-author { display: block; margin-bottom: 8px; }
-.meta-date { display: block; font-style: italic; color: #718096; }
-
-.buy-link {
-    display: inline-block;
-    padding: 6px 16px;
-    border: 1px solid #cbd5e0;
-    border-radius: 4px;
+    color: var(--text-secondary) !important;
     text-decoration: none;
     font-size: 0.9rem;
-    color: #4a5568 !important;
-    background: #fff;
-    transition: all 0.2s;
-}
-.buy-link:hover {
-    background: #edf2f7;
-    color: #2d3748 !important;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-/* 底部 */
-.footer-action {
-    text-align: center;
-    margin-top: 50px;
-}
-.back-to-top {
-    text-decoration: none;
-    color: #34558b;
-    font-weight: bold;
-    padding: 10px 30px;
-    border: 1px solid #34558b;
-    border-radius: 5px;
-    transition: background 0.3s;
-    display: inline-block;
-}
-.back-to-top:hover {
-    background: #34558b;
-    color: white !important;
-}
+.nav-link:hover { color: var(--text-primary) !important; }
 
-.site-footer {
-    background-color: rgba(52, 85, 139, 0.9);
-    color: white; 
-    width: 70%; 
+/* 容器布局 */
+.app-container {
+    width: 85%;
+    max-width: 900px;
     margin: 0 auto;
-    text-align: center; 
-    padding: 10px 0; 
-    font-size: 12px;
-}
-.edu-item { margin-bottom: 20px; }
-.edu-title { margin: 0; color: #34558b; font-size: 1.1rem; display: flex; justify-content: space-between; }
-.edu-time { font-size: 0.9rem; color: #666; font-weight: normal; }
-.edu-desc { margin: 5px 0; font-size: 0.95rem; color: #444; }
-
-.custom-list { padding-left: 20px; margin: 10px 0; }
-.list-item { font-size: 0.95rem; color: #444; margin-bottom: 8px; line-height: 1.6; }
-
-.exp-item { margin-bottom: 25px; }
-.exp-title { margin: 0 0 10px 0; color: #34558b; font-size: 1.05rem; }
-
-.evaluation-text { font-size: 0.95rem; color: #444; line-height: 1.8; margin: 0; }
-
-/* 生活志样式 */
-.lifestyle-section {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+    padding: 40px 20px;
 }
 
-.lifestyle-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #34558b;
-    margin-bottom: 15px;
+/* Header Section - 呼吸感布局 */
+.header-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 0 80px;
+    gap: 40px;
+}
+
+.avatar-wrap { text-align: center; }
+
+.avatar-img { 
+    width: 160px; 
+    height: 160px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 1px solid var(--border-soft);
+    padding: 6px;
+    background: #fff;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-smooth);
+}
+
+.avatar-img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.info-wrap { width: 100%; max-width: 700px; }
+
+.intro-p { 
+    font-size: 1.2rem; 
+    color: var(--text-primary); 
+    margin-bottom: 24px; 
+    line-height: 1.7; 
+    font-weight: 400;
+}
+
+.font-bold { color: var(--accent); font-weight: 600; }
+
+.som-link { 
+    color: var(--text-primary); 
+    text-decoration: none; 
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 2px;
+    transition: 0.2s;
+}
+
+.som-link:hover { background: var(--accent-light); }
+
+/* 联系信息 - 条目式设计 */
+.contact-info { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 12px; 
+    margin-top: 20px;
+}
+
+.contact-item, .contact-item-last { 
+    font-size: 0.85rem; 
+    color: var(--text-secondary); 
+    background: var(--bg-secondary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--border-soft);
     display: flex;
     align-items: center;
-    gap: 8px;
 }
 
-.lifestyle-title::after {
-    content: "";
-    flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, #34558b, transparent);
-    margin-left: 10px;
+.contact-icon { margin-right: 8px; color: var(--accent); opacity: 0.7; }
+
+/* 生活志 - 精致小卡片 */
+.lifestyle-section { margin-top: 50px; }
+
+.lifestyle-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
-.lifestyle-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 15px;
+.lifestyle-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
 }
 
 .lifestyle-card {
-    background: #ffffff;
-    border: 1px solid #f0f0f0;
+    background: var(--bg-main);
+    border: 1px solid var(--border-soft);
     border-radius: 12px;
-    padding: 15px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: default;
-    position: relative;
-    overflow: hidden;
+    padding: 24px;
+    text-align: left;
+    transition: var(--transition-smooth);
+    box-shadow: var(--card-shadow);
 }
 
 .lifestyle-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    border-color: #34558b;
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--accent);
 }
 
-.lifestyle-card .icon {
+.lifestyle-card .icon { font-size: 1.4rem; margin-bottom: 12px; display: block; }
+.lifestyle-card .label { font-weight: 600; font-size: 0.95rem; color: var(--text-primary); margin-bottom: 6px; display: block;}
+.lifestyle-card .desc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
+
+/* 板块通用头部 */
+.section-header {
     font-size: 1.5rem;
-    margin-bottom: 8px;
-    display: block;
+    font-weight: 600;
+    margin: 100px 0 40px;
+    text-align: center;
+    position: relative;
 }
 
-.lifestyle-card .label {
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: #2c3e50;
-    display: block;
-    margin-bottom: 4px;
-}
-
-.lifestyle-card .desc {
-    font-size: 0.8rem;
-    color: #7f8c8d;
-    line-height: 1.4;
-}
-
-.lifestyle-card::before {
+.section-header::after {
     content: "";
-    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.card-body { 
+    padding: 0;
+}
+
+/* 列表与项目 */
+.custom-list { list-style: none; padding: 0; }
+
+.list-item { 
+    margin-bottom: 20px; 
+    color: var(--text-secondary);
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--border-soft);
+    transition: 0.3s;
+}
+
+.list-item:hover { transform: scale(1.01); border-color: var(--accent); color: var(--text-primary); }
+
+.project-item { margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid var(--border-soft); }
+.project-title { font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 15px; }
+
+/* 阅读列表 */
+.accordion-wrap { margin-bottom: 32px; }
+
+.year-header {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    padding: 16px 24px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 1px solid var(--border-soft);
+}
+
+.book-entry {
+    display: flex;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 32px;
+    margin-top: 16px;
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid var(--border-soft);
+}
+
+.book-cover { 
+    width: 100px; 
+    border-radius: 4px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+}
+
+.book-title { font-size: 1.3rem; margin-bottom: 8px; color: var(--text-primary); }
+
+.buy-link {
+    font-size: 0.85rem;
+    color: var(--accent) !important;
+    text-decoration: none;
+    font-weight: 600;
+    border: 1px solid var(--accent);
+    padding: 6px 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.buy-link:hover { background: var(--accent); color: white !important; }
+
+/* 底部 */
+.footer-action { margin: 80px 0; text-align: center; }
+
+.back-to-top {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 10px 24px;
+    border: 1px solid var(--border-soft);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.back-to-top:hover { background: var(--bg-secondary); color: var(--text-primary); border-color: var(--text-primary); }
+
+/* 禅意空间 (小游戏) 样式 */
+.zen-entry {
+    margin-top: 120px;
+    text-align: center;
+    padding: 60px 0;
+    border-top: 1px solid var(--border-soft);
+}
+
+.zen-btn {
+    background: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    letter-spacing: 1px;
+}
+
+.zen-btn:hover {
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+    padding: 12px 40px;
+    background: var(--bg-secondary);
+}
+
+.game-overlay {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 4px;
+    width: 100%;
     height: 100%;
-    background: #34558b;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.5s ease;
 }
 
-.lifestyle-card:hover::before {
+.game-overlay.active {
+    display: flex;
     opacity: 1;
 }
 
-/* 特定颜色 */
-.card-spicy:hover { border-color: #e63946; }
-.card-spicy:hover::before { background: #e63946; }
-.card-mahjong:hover { border-color: #2a9d8f; }
-.card-mahjong:hover::before { background: #2a9d8f; }
-.card-sichuan:hover { border-color: #f4a261; }
-.card-sichuan:hover::before { background: #f4a261; }
+.game-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    width: 90%;
+    max-width: 500px;
+    perspective: 1000px;
+}
+
+.memory-card {
+    height: 110px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.memory-card.flip { transform: rotateY(180deg); }
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--card-shadow);
+}
+
+.card-back {
+    background: var(--bg-secondary);
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+.card-front {
+    background: #fff;
+    transform: rotateY(180deg);
+    font-size: 2rem;
+}
+
+.game-message {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.close-game {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: 0.3s;
+}
+
+.close-game:hover { color: var(--text-primary); transform: rotate(90deg); }
+
+.site-footer {
+    padding: 60px 0;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border-soft);
+}
+
+/* 适配响应式 */
+@media (max-width: 768px) {
+    .nav-container, .app-container { width: 92%; }
+    .lifestyle-grid { grid-template-columns: 1fr; }
+    .book-entry { flex-direction: column; align-items: center; text-align: center; }
+    .header-section { padding: 40px 0; }
+}
