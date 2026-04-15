@@ -2,14 +2,14 @@
 
 :root {
     --bg-main: #ffffff;
-    --bg-secondary: #fbfbfd;
-    --text-primary: #1d1d1f;
-    --text-secondary: #6e6e73;
-    --accent: #34558b; /* ZJU Blue */
-    --accent-light: #eef2f8;
-    --border-soft: #e2e8f0;
-    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --bg-secondary: #f2f5f9;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --accent: #2563eb; /* ZJU Blue (更亮) */
+    --accent-light: #dbeafe;
+    --border-soft: #cbd5e1;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -84,25 +84,31 @@ h1, h2, h3, h4, .nav-name, .section-header {
     padding: 40px 20px;
 }
 
-/* Header Section - 呼吸感布局 */
+/* Header Section - 左右两栏布局 */
 .header-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    padding: 60px 0 80px;
+    gap: 48px;
+}
+
+.avatar-wrap { 
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 60px 0 80px;
-    gap: 40px;
+    width: 200px;
 }
-
-.avatar-wrap { text-align: center; }
 
 .avatar-img { 
     width: 160px; 
     height: 160px; 
     border-radius: 50%; 
     object-fit: cover; 
-    border: 1px solid var(--border-soft);
-    padding: 6px;
+    border: 2px solid var(--border-soft);
+    padding: 5px;
     background: #fff;
     box-shadow: var(--card-shadow);
     transition: var(--transition-smooth);
@@ -113,14 +119,15 @@ h1, h2, h3, h4, .nav-name, .section-header {
     box-shadow: var(--card-shadow-hover);
 }
 
-.info-wrap { width: 100%; max-width: 700px; }
+.info-wrap { flex: 1; min-width: 0; }
 
 .intro-p { 
-    font-size: 1.2rem; 
+    font-size: 1.05rem; 
     color: var(--text-primary); 
-    margin-bottom: 24px; 
-    line-height: 1.7; 
+    margin-bottom: 20px; 
+    line-height: 1.8; 
     font-weight: 400;
+    text-align: left;
 }
 
 .font-bold { color: var(--accent); font-weight: 600; }
@@ -138,42 +145,43 @@ h1, h2, h3, h4, .nav-name, .section-header {
 /* 联系信息 - 条目式设计 */
 .contact-info { 
     display: flex; 
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 12px; 
-    margin-top: 20px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px; 
+    margin-top: 16px;
+    width: 100%;
 }
 
 .contact-item, .contact-item-last { 
-    font-size: 0.85rem; 
-    color: var(--text-secondary); 
+    font-size: 0.82rem; 
+    color: var(--text-primary); 
     background: var(--bg-secondary);
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 7px 14px;
+    border-radius: 10px;
     border: 1px solid var(--border-soft);
     display: flex;
     align-items: center;
 }
 
-.contact-icon { margin-right: 8px; color: var(--accent); opacity: 0.7; }
+.contact-icon { margin-right: 8px; color: var(--accent); opacity: 0.85; }
 
 /* 生活志 - 精致小卡片 */
-.lifestyle-section { margin-top: 50px; }
+.lifestyle-section { margin-top: 40px; }
 
 .lifestyle-title {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 25px;
-    text-align: center;
+    margin-bottom: 18px;
+    text-align: left;
 }
 
 .lifestyle-grid { 
     display: grid; 
     grid-template-columns: repeat(3, 1fr); 
-    gap: 20px; 
+    gap: 14px; 
 }
 
 .lifestyle-card {
@@ -285,16 +293,17 @@ h1, h2, h3, h4, .nav-name, .section-header {
 .custom-list { list-style: none; padding: 0; }
 
 .list-item { 
-    margin-bottom: 20px; 
-    color: var(--text-secondary);
-    padding: 20px;
+    margin-bottom: 16px; 
+    color: var(--text-primary);
+    padding: 18px 20px;
     background: var(--bg-secondary);
     border-radius: 12px;
     border: 1px solid var(--border-soft);
     transition: 0.3s;
+    line-height: 1.7;
 }
 
-.list-item:hover { transform: scale(1.01); border-color: var(--accent); color: var(--text-primary); }
+.list-item:hover { transform: scale(1.01); border-color: var(--accent); background: var(--accent-light); }
 
 .project-item { margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid var(--border-soft); }
 .project-title { font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 15px; }
@@ -392,8 +401,8 @@ h1, h2, h3, h4, .nav-name, .section-header {
 
 .game-section {
     padding: 60px 20px;
-    background: linear-gradient(180deg, rgba(10, 10, 30, 0.8) 0%, rgba(20, 20, 50, 0.9) 100%);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(180deg, #0a0a1e 0%, #10103a 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     margin-top: 80px;
 }
 
@@ -409,15 +418,16 @@ h1, h2, h3, h4, .nav-name, .section-header {
 
 .game-container {
     display: flex;
-    gap: 15px;
+    gap: 20px;
     max-width: 1100px;
     width: 95%;
+    margin: 0 auto;
     justify-content: center;
     align-items: flex-start;
 }
 
 .game-sidebar {
-    width: 200px;
+    width: 220px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -425,10 +435,10 @@ h1, h2, h3, h4, .nav-name, .section-header {
 }
 
 .sidebar-section {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 10px;
-    padding: 10px;
+    padding: 12px;
 }
 
 .sidebar-header {
@@ -462,8 +472,8 @@ h1, h2, h3, h4, .nav-name, .section-header {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.2s;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.07);
 }
 
 .tower-btn:hover {
@@ -540,7 +550,7 @@ h1, h2, h3, h4, .nav-name, .section-header {
 
 .info-stat {
     font-size: 0.7rem;
-    color: #aaaacc;
+    color: #ccccee;
 }
 
 .info-actions {
@@ -560,8 +570,9 @@ h1, h2, h3, h4, .nav-name, .section-header {
 }
 
 .upgrade-btn {
-    background: #2a6e2a;
+    background: #1e7e1e;
     color: #ffffff;
+    border: 1px solid #2ecc2e;
 }
 
 .upgrade-btn:hover {
@@ -574,8 +585,9 @@ h1, h2, h3, h4, .nav-name, .section-header {
 }
 
 .sell-btn {
-    background: #6e2a2a;
+    background: #7e2020;
     color: #ffffff;
+    border: 1px solid #cc3333;
 }
 
 .sell-btn:hover {
@@ -595,9 +607,16 @@ h1, h2, h3, h4, .nav-name, .section-header {
     gap: 6px;
 }
 
+/* controls-row: 4个控制按钮2x2排列 */
+.controls-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
 .ctrl-btn {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
     color: #ffffff;
     border-radius: 8px;
     padding: 8px 4px;
@@ -618,7 +637,7 @@ h1, h2, h3, h4, .nav-name, .section-header {
 }
 
 .help-text {
-    color: #8888aa;
+    color: #b8b8d8;
     font-size: 0.65rem;
     line-height: 1.6;
 }
@@ -660,7 +679,16 @@ h1, h2, h3, h4, .nav-name, .section-header {
     .nav-container, .app-container { width: 92%; }
     .lifestyle-grid { grid-template-columns: 1fr; }
     .book-entry { flex-direction: column; align-items: center; text-align: center; }
-    .header-section { padding: 40px 0; }
+    .header-section { 
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 40px 0; 
+    }
+    .avatar-wrap { width: auto; }
+    .contact-info { align-items: center; }
+    .lifestyle-title { text-align: center; }
+    .intro-p { text-align: center; }
     .game-container { flex-direction: column; align-items: center; }
     .game-sidebar { width: 100%; max-width: 500px; flex-direction: row; flex-wrap: wrap; }
     .sidebar-section { flex: 1; min-width: 150px; }

@@ -1460,10 +1460,12 @@ class UIController {
             </div>
             <div class="info-actions">
                 ${tower.level < 3 ? `<button class="upgrade-btn ${canUpgrade ? '' : 'disabled'}" id="upgradeBtn">⬆ 升级 💰${upgradeCost}</button>` : '<div class="max-level">✨ 已满级</div>'}
-                <button class="sell-btn" id="sellBtn">� 铲除 💰${sellValue}</button>
+                <button class="sell-btn" id="sellBtn">💰 铲除 +${sellValue}</button>
             </div>
         `;
         infoPanel.style.display = 'block';
+        const section = document.getElementById('towerInfoSection');
+        if (section) section.style.display = 'block';
 
         const upgradeBtn = document.getElementById('upgradeBtn');
         if (upgradeBtn && canUpgrade) {
@@ -1485,6 +1487,8 @@ class UIController {
         if (infoPanel) {
             infoPanel.style.display = 'none';
         }
+        const section = document.getElementById('towerInfoSection');
+        if (section) section.style.display = 'none';
     }
 
     updateGoldDisplay(gold) {
