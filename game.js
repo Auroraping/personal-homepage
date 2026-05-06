@@ -2025,3 +2025,12 @@ function closeGame() {
         gameInstance.stop();
     }
 }
+
+// 自动启动游戏
+window.addEventListener('load', () => {
+    if (!gameInstance) {
+        gameInstance = new Game();
+        gameInstance.init();
+        gameInstance.start();
+    }
+});
