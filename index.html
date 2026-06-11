@@ -141,23 +141,10 @@
         <div class="section-header" id="projects">项目经历 (Project Experience)</div>
         <div class="card-body">
             <div class="project-item">
-                <h4 class="project-title">1. Walmart M5 零售销量预测与库存优化分析 (课程项目 | 核心负责人)</h4>
-                <ul class="custom-list">
-                    <li class="list-item"><span class="font-bold">项目背景:</span>
-                        基于沃尔玛3个州10家门店的1913天历史销售数据，预测未来28天的分层级销量，以优化库存管理。</li>
-                    <li class="list-item"><span class="font-bold">数据清洗与EDA:</span> 使用 Python (Pandas)
-                        处理百万级长尾数据，通过帕累托分析发现前35%商品贡献80%销量，识别出“零销量”间歇性特征。定量分析发现SNAP福利日使销量提升约12.08%，为特征工程提供业务依据。</li>
-                    <li class="list-item"><span class="font-bold">特征工程与建模:</span> 构建了滞后特征(Lag)、滚动统计特征(Rolling
-                        Mean/Std)及日历事件特征。对比LightGBM与Seq2Seq LSTM模型，利用Tweedie损失函数处理数据长尾分布问题。</li>
-                    <li class="list-item"><span class="font-bold">分析成果:</span> 最终模型在聚合层级(Total)达到
-                        R²=0.96，WAPE低至4%。最终提出针对周末高峰备货及核心SKU聚焦的供应链优化建议。</li>
-                </ul>
-            </div>
-            <div class="project-item">
-                <h4 class="project-title">2. 医院血液中心库存决策优化系统 (SRTP科研训练 | 核心成员)</h4>
+                <h4 class="project-title">1. 医院血液中心库存决策优化系统 (SRTP科研训练 | 核心成员) <span class="project-time" style="float: right; font-weight: normal; font-size: 0.95rem; color: #555;">2025.05 – 2026.05</span></h4>
                 <ul class="custom-list">
                     <li class="list-item"><span class="font-bold">业务背景:</span>
-                        针对三甲医院血液中心“过期浪费”与“缺货短缺”的双重风险，探索基于数据驱动的库存订货策略。</li>
+                        针对三甲医院血液中心“过期浪费”与“缺货短缺”双重风险，探索基于数据驱动的库存订货策略。</li>
                     <li class="list-item"><span class="font-bold">模型构建:</span>
                         设计了SEO(先预测后优化)与JEO(端到端联合优化)两套方案。在JEO方案中，基于DeepSets架构设计神经网络，直接从历史申请数据映射到最优订货量。</li>
                     <li class="list-item"><span class="font-bold">策略评估:</span> 引入报童模型(Newsvendor
@@ -167,24 +154,25 @@
                 </ul>
             </div>
             <div class="project-item">
-                <h4 class="project-title">3. Shopee 商品同款图像/文本检索系统 (项目成员 | 算法与策略分析)</h4>
+                <h4 class="project-title">2. 杭州移景科技 · 量化系统开发 (实习生) <span class="project-time" style="float: right; font-weight: normal; font-size: 0.95rem; color: #555;">2026.02 – 2026.05</span></h4>
                 <ul class="custom-list">
-                    <li class="list-item"><span class="font-bold">项目目标:</span> 解决电商场景下商品“同款不同图”的检索难题，提升搜索匹配准确率。</li>
-                    <li class="list-item"><span class="font-bold">多模态分析:</span> 基于CLIP模型提取图像与文本特征。通过消融实验(Ablation
-                        Study)定量分析发现，电商场景下文本特征(标题、品牌)的判别力优于纯图像特征。</li>
-                    <li class="list-item"><span class="font-bold">策略优化:</span> 设计了“冻结编码器 +
-                        ArcFace微调”的训练策略，解决了微调过程中的特征塌陷问题。确定了40%图像 + 60%文本的最优加权融合策略。</li>
-                    <li class="list-item"><span class="font-bold">最终产出:</span>
-                        系统检索准确率(mAP@50)从基准的0.659提升至0.896(提升35.9%)，显著优化了商品匹配效率。</li>
+                    <li class="list-item"><span class="font-bold">工作内容:</span> 开发量化交易辅助系统，涵盖数据采集、因子挖掘及策略回测，实现研究到生产的自动化闭环。</li>
+                    <li class="list-item"><span class="font-bold">策略优化:</span> 设计维护核心高波动长影线、小市值及人气动量等策略，通过特征工程持续优化模型。</li>
+                    <li class="list-item"><span class="font-bold">系统开发:</span> 基于 MySQL 构建自动化行情库；开发市值过滤及 Alpha 评价模块实现实时风险预警。</li>
                 </ul>
             </div>
             <div class="project-item">
-                <h4 class="project-title">4. 数学建模竞赛 代码实现负责人</h4>
+                <h4 class="project-title">3. 浙里淘书 (zook) · 校园二手教材交易平台 (小组项目) <span class="project-time" style="float: right; font-weight: normal; font-size: 0.95rem; color: #555;">2026.04 – 2026.06</span></h4>
                 <ul class="custom-list">
-                    <li class="list-item">负责赛题的数学模型转化为计算机代码(Python)，进行数据预处理、模型求解及灵敏度分析，撰写论文中的模型求解与结果分析章节。</li>
+                    <li class="list-item"><span class="font-bold">项目简介:</span> 面向浙江大学师生的二手教材 C2C 交易平台，涵盖书籍发布/审核、检索、收藏、下单、支付、评价完整交易闭环。</li>
+                    <li class="list-item"><span class="font-bold">技术架构:</span> Vue 3 + Vite + Composition API / Flask + SQLite + Socket.IO / DeepSeek AI API。</li>
+                    <li class="list-item"><span class="font-bold">前端开发:</span> 基于 Vue 3 Composition API 构建 18 个页面 + 45+ 组件的前端 SPA，使用路由懒加载与 composables 实现逻辑复用。</li>
+                    <li class="list-item"><span class="font-bold">后端设计:</span> 后端采用 Flask Blueprint 模块化架构，拆分为 12 个业务蓝图，实现关注点分离；设计 13 张 SQLite 数据表支撑业务数据持久化。</li>
+                    <li class="list-item"><span class="font-bold">核心功能:</span> 集成 Socket.IO 实现实时消息推送与在线状态管理，支持即时聊天和系统通知。</li>
+                    <li class="list-item"><span class="font-bold">智能与认证:</span> 对接浙大教务系统抓取课表，自动匹配平台二手书资源；接入 DeepSeek AI 构建智能教材助手；实现浙大 CAS 统一身份认证与 JWT 会话管理。</li>
                 </ul>
             </div>
-        </div>
+</div>
 
         <div class="section-header" id="campus">校园经历 (Campus Experience)</div>
         <div class="card-body">
