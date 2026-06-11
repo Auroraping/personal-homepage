@@ -525,18 +525,8 @@
             <div class="card" style="padding-bottom: 0.5rem;">
                 <h2><i class="fas fa-flask"></i> 项目经历</h2>
 
-                <div class="project-item">
-                    <h3>Walmart M5 零售销量预测与库存优化 <span class="project-tag">核心负责人 · 课程项目</span></h3>
-                    <p>基于沃尔玛3个州10家门店1913天历史销售数据，预测未来28天销量优化库存。</p>
-                    <ul class="project-desc">
-                        <li>Python处理百万级长尾数据，帕累托分析发现前35%商品贡献80%销量，SNAP福利日销售提升+12.08%</li>
-                        <li>构建滞后/滚动统计/日历特征，对比LightGBM与Seq2Seq LSTM，采用Tweedie损失处理长尾</li>
-                        <li>模型聚合层级R²=0.96，WAPE=4%，提出周末高峰备货及核心SKU聚焦建议</li>
-                    </ul>
-                </div>
-
-                <div class="project-item">
-                    <h3>医院血液中心库存决策优化系统 <span class="project-tag">SRTP · 负责人</span></h3>
+                                <div class="project-item">
+                    <h3>医院血液中心库存决策优化系统 <span class="project-tag">SRTP · 负责人 · 2025.05 – 2026.05</span></h3>
                     <p>针对三甲医院“过期浪费”与“缺货短缺”双重风险的数据驱动订货策略。</p>
                     <ul class="project-desc">
                         <li>设计SEO (先预测后优化) 与JEO (端到端联合优化) 方案，基于DeepSets网络映射申请量→最优订货量</li>
@@ -546,19 +536,25 @@
                 </div>
 
                 <div class="project-item">
-                    <h3>Shopee商品同款图像/文本检索系统 <span class="project-tag">算法成员</span></h3>
-                    <p>解决电商“同款不同图”检索难题，提升搜索匹配准确率。</p>
+                    <h3>杭州移景科技 · 量化系统开发 <span class="project-tag">实习生 · 2026.02 – 2026.05</span></h3>
+                    <p>开发量化交易辅助系统，涵盖数据采集、因子挖掘及策略回测，实现研究到生产的自动化闭环。</p>
                     <ul class="project-desc">
-                        <li>基于CLIP提取多模态特征，消融实验发现文本特征（标题/品牌）判别力优于纯图像</li>
-                        <li>冻结编码器+ArcFace微调，解决特征塌陷；确定40%图像+60%文本加权融合</li>
-                        <li>mAP@50从0.659提升至0.896 (+35.9%)，显著优化商品匹配效率</li>
+                        <li>设计维护核心高波动长影线、小市值及人气动量等策略，通过特征工程持续优化模型</li>
+                        <li>基于 MySQL 构建自动化行情库；开发市值过滤及 Alpha 评价模块实现实时风险预警</li>
                     </ul>
                 </div>
 
                 <div class="project-item">
-                    <h3>数学建模竞赛 <span class="project-tag">代码实现负责人</span></h3>
+                    <h3>浙里淘书 (zook) · 校园二手教材交易平台 <span class="project-tag">小组项目 · 2026.04 – 2026.06</span></h3>
+                    <p>面向浙江大学师生的二手教材 C2C 交易平台，涵盖书籍发布/审核、检索、收藏、下单、支付、评价完整交易闭环。</p>
                     <ul class="project-desc">
-                        <li>负责数学模型代码实现 (Python)，数据预处理、模型求解、灵敏度分析，撰写论文模型求解章节</li>
+                        <li>技术栈：Vue 3 + Vite + Composition API / Flask + SQLite + Socket.IO / DeepSeek AI API</li>
+                        <li>基于 Vue 3 Composition API 构建 18 个页面 + 45+ 组件的前端 SPA，使用路由懒加载与 composables 实现逻辑复用</li>
+                        <li>后端采用 Flask Blueprint 模块化架构，拆分为 12 个业务蓝图，实现关注点分离</li>
+                        <li>设计 13 张 SQLite 数据表支撑用户、书籍、订单、心愿、通知、社区笔记等业务数据持久化</li>
+                        <li>集成 Socket.IO 实现实时消息推送与在线状态管理，支持即时聊天和系统通知</li>
+                        <li>对接浙大教务系统抓取课表，自动匹配平台二手书资源；接入 DeepSeek AI 构建智能教材助手</li>
+                        <li>实现浙大 CAS 统一身份认证与 JWT 会话管理，支持 token 签发、校验与主动撤销</li>
                     </ul>
                 </div>
             </div>
