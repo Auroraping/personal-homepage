@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Lei Wang | Zhejiang University</title>
     <script src="https://kit.fontawesome.com/805ab53803.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 
@@ -112,7 +114,7 @@
         <div class="section-header" id="evaluation">自我评价 (Self Evaluation)</div>
         <div class="card-body">
             <p class="evaluation-text">
-                具备扎实的专业基础，掌握Python编程、机器学习、数据库等相关技术，拥有丰富的项目实践经历，具备较强的代码实现能力与问题解决能力。在校期间担任多项学生职务，具备良好的团队协作、沟通协调与组织管理能力。工作态度认真负责，学习能力强，能快速适应新环境与新任务，积极主动完成各项工作，期待在寒假实习中积累实践经验，提升专业技能。
+                具备扎实的专业基础，掌握Python编程、机器学习、数据库等相关技术，拥有丰富的项目实践经历，具备较强的代码实现能力与问题解决能力。在校期间担任多项学生职务，具备良好的团队协作、沟通协调与组织管理能力。工作态度认真负责，学习能力强，能快速适应新环境与新任务，积极主动完成各项工作。
             </p>
         </div>
 
@@ -125,79 +127,164 @@
             </div>
         </div>
 
-        <div class="section-header" id="skills">专业技能 (Professional Skills)</div>
-        <div class="card-body">
-            <ul class="custom-list">
-                <li class="list-item"><span class="font-bold">编程语言:</span> Python (Pandas, NumPy, Scikit-learn,
-                    PyTorch), SQL (熟练掌握多表查询、窗口函数、子查询), MATLAB</li>
-                <li class="list-item"><span class="font-bold">数据分析与挖掘:</span> 掌握随机森林、LightGBM、LSTM等机器学习算法; 熟悉A/B
-                    Test实验设计; 具备良好的特征工程与EDA(探索性数据分析)能力</li>
-                <li class="list-item"><span class="font-bold">数据可视化:</span> Matplotlib, Seaborn, Tableau/PowerBI</li>
-                <li class="list-item"><span class="font-bold">通用技能:</span> 英文文献阅读能力, Latex论文排版, 数学建模</li>
-            </ul>
+        <div class="section-header collapsible" id="skills">
+            <div class="section-title-wrap toggle-trigger">
+                专业技能 (Professional Skills)
+                <span class="toggle-icon">▼</span>
+            </div>
         </div>
-
-        <div class="section-header" id="projects">项目经历 (Project Experience)</div>
-        <div class="card-body">
-            <div class="project-item">
-                <h4 class="project-title">1. 医院血液中心库存决策优化系统 (SRTP科研训练 | 核心成员) <span class="project-time" style="float: right; font-weight: normal; font-size: 0.95rem; color: #555;">2025.05 – 2026.05</span></h4>
+        <div class="skill-details"
+            style="max-height: 0px; overflow: hidden; opacity: 0; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;">
+            <div class="card-body">
                 <ul class="custom-list">
-                    <li class="list-item"><span class="font-bold">业务背景:</span>
-                        针对三甲医院血液中心“过期浪费”与“缺货短缺”双重风险，探索基于数据驱动的库存订货策略。</li>
-                    <li class="list-item"><span class="font-bold">模型构建:</span>
-                        设计了SEO(先预测后优化)与JEO(端到端联合优化)两套方案。在JEO方案中，基于DeepSets架构设计神经网络，直接从历史申请数据映射到最优订货量。</li>
-                    <li class="list-item"><span class="font-bold">策略评估:</span> 引入报童模型(Newsvendor
-                        Loss)作为损失函数，通过tau参数化模拟不同缺货/积压成本权重。</li>
-                    <li class="list-item"><span class="font-bold">结果量化:</span>
-                        实验表明，端到端优化(JEO)在业务成本控制上显著优于传统“先预测后优化”方法，并引入Prescriptive Power指标验证了模型相比SAA方法的决策质量提升。</li>
-                </ul>
-            </div>
-            <div class="project-item">
-                <h4 class="project-title">2. 杭州移景科技 · 量化系统开发 (实习生) <span class="project-time" style="float: right; font-weight: normal; font-size: 0.95rem; color: #555;">2026.02 – 2026.05</span></h4>
-                <ul class="custom-list">
-                    <li class="list-item"><span class="font-bold">工作内容:</span> 开发量化交易辅助系统，涵盖数据采集、因子挖掘及策略回测，实现研究到生产的自动化闭环。</li>
-                    <li class="list-item"><span class="font-bold">策略优化:</span> 设计维护核心高波动长影线、小市值及人气动量等策略，通过特征工程持续优化模型。</li>
-                    <li class="list-item"><span class="font-bold">系统开发:</span> 基于 MySQL 构建自动化行情库；开发市值过滤及 Alpha 评价模块实现实时风险预警。</li>
-                </ul>
-            </div>
-            <div class="project-item">
-                <h4 class="project-title">3. 浙里淘书 (zook) · 校园二手教材交易平台 (小组项目) <span class="project-time" style="float: right; font-weight: normal; font-size: 0.95rem; color: #555;">2026.04 – 2026.06</span></h4>
-                <ul class="custom-list">
-                    <li class="list-item"><span class="font-bold">项目简介:</span> 面向浙江大学师生的二手教材 C2C 交易平台，涵盖书籍发布/审核、检索、收藏、下单、支付、评价完整交易闭环。</li>
-                    <li class="list-item"><span class="font-bold">技术架构:</span> Vue 3 + Vite + Composition API / Flask + SQLite + Socket.IO / DeepSeek AI API。</li>
-                    <li class="list-item"><span class="font-bold">前端开发:</span> 基于 Vue 3 Composition API 构建 18 个页面 + 45+ 组件的前端 SPA，使用路由懒加载与 composables 实现逻辑复用。</li>
-                    <li class="list-item"><span class="font-bold">后端设计:</span> 后端采用 Flask Blueprint 模块化架构，拆分为 12 个业务蓝图，实现关注点分离；设计 13 张 SQLite 数据表支撑业务数据持久化。</li>
-                    <li class="list-item"><span class="font-bold">核心功能:</span> 集成 Socket.IO 实现实时消息推送与在线状态管理，支持即时聊天和系统通知。</li>
-                    <li class="list-item"><span class="font-bold">智能与认证:</span> 对接浙大教务系统抓取课表，自动匹配平台二手书资源；接入 DeepSeek AI 构建智能教材助手；实现浙大 CAS 统一身份认证与 JWT 会话管理。</li>
-                </ul>
-            </div>
-</div>
-
-        <div class="section-header" id="campus">校园经历 (Campus Experience)</div>
-        <div class="card-body">
-            <div class="exp-item">
-                <h4 class="exp-title">1. 浙江大学心理健康协会</h4>
-                <ul class="custom-list">
-                    <li class="list-item">参与协会组织的心理健康科普宣传、心理互助活动策划与执行，具备良好的沟通表达能力</li>
-                </ul>
-            </div>
-            <div class="exp-item">
-                <h4 class="exp-title">2. 浙江大学管理学院党素培训部</h4>
-                <ul class="custom-list">
-                    <li class="list-item">系统学习党的理论知识与方针政策，参与党性修养实践活动，提升思想政治觉悟与责任担当意识</li>
-                    <li class="list-item">完成培训期间的学习任务与考核，撰写学习心得，强化服务意识与团队协作精神</li>
-                </ul>
-            </div>
-            <div class="exp-item">
-                <h4 class="exp-title">3. 班级副班长、心理委员</h4>
-                <ul class="custom-list">
-                    <li class="list-item">协助班长完成班级日常管理、活动组织与信息传达工作，协调班级同学关系，营造良好班级氛围</li>
-                    <li class="list-item">履行心理委员职责，关注班级同学心理健康状况，协助学院开展心理健康相关工作，保障班级同学身心健康</li>
+                    <li class="list-item"><span class="font-bold">编程语言:</span> Python (Pandas, NumPy, Scikit-learn,
+                        PyTorch), SQL (熟练掌握多表查询、窗口函数、子查询), MATLAB</li>
+                    <li class="list-item"><span class="font-bold">数据分析与挖掘:</span> 掌握随机森林、LightGBM、LSTM等机器学习算法; 熟悉 A/B
+                        Test 实验设计; 具备良好的特征工程与 EDA (探索性数据分析) 能力</li>
+                    <li class="list-item"><span class="font-bold">数据可视化:</span> Matplotlib, Seaborn, Tableau / PowerBI
+                    </li>
+                    <li class="list-item"><span class="font-bold">通用技能:</span> 英文文献阅读能力, LaTeX 论文排版, 数学建模</li>
                 </ul>
             </div>
         </div>
 
-        
+        <div class="section-header" id="projects">项目经历 (Project Experience)</div>
+
+        <div class="card-body">
+            <!-- 项目 1 -->
+            <div class="project-item collapsible">
+                <h4 class="project-title toggle-trigger">
+                    <span class="title-text-wrap">
+                        1. “智汇宝”外汇衍生品管理系统 (杭州幻视金融 · 产品经理实习生)
+                        <span class="toggle-icon">▼</span>
+                    </span>
+                    <span class="project-time">2026.06 – 2026.07</span>
+                </h4>
+                <div class="project-details"
+                    style="max-height: 0px; overflow: hidden; opacity: 0; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;">
+                    <ul class="custom-list">
+                        <li class="list-item"><span class="font-bold">业务背景:</span>
+                            针对外汇衍生品交易场景，设计套保避险决策工具，量化汇率波动对企业毛利润与套保损益的影响。</li>
+                        <li class="list-item"><span class="font-bold">核心设计:</span>
+                            负责“保底汇率测算”及“套期损益回测”模块的需求规格说明书撰写与业务算法定义，利用期望税前利润反推管控汇率，通过边界汇率模型评估锁汇与敞口策略的综合收益。</li>
+                        <li class="list-item"><span class="font-bold">功能迭代:</span>
+                            主导交易试算分析模块的迭代改造，新增滚动避险、期权偏置与止盈止损风控分批锁汇逻辑，定义并实现非标准月份的远期汇率线性插值算法，支撑损益回测分析的精度要求。</li>
+                        <li class="list-item"><span class="font-bold">“汇小智AI”设计:</span>
+                            “汇小智AI”外汇分析助手的需求规格定义与业务场景(Case)梳理，围绕交易专员与CFO的日常汇率查询、事件影响评估及套保策略推荐等高频场景，设计自然语言交互的智能分析链路，推动管理系统从“数据看板”向“AI驱动策略建议”演进。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 项目 2 -->
+            <div class="project-item collapsible">
+                <h4 class="project-title toggle-trigger">
+                    <span class="title-text-wrap">
+                        2. 浙里淘书 (zook) · 校园二手教材交易平台 (小组项目)
+                        <span class="toggle-icon">▼</span>
+                    </span>
+                    <span class="project-time">2026.04 – 2026.06</span>
+                </h4>
+                <div class="project-details"
+                    style="max-height: 0px; overflow: hidden; opacity: 0; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;">
+                    <ul class="custom-list">
+                        <li class="list-item"><span class="font-bold">项目简介:</span> 面向浙江大学师生的二手教材 C2C
+                            交易平台，涵盖书籍发布/审核、检索、收藏、下单、支付、评价完整交易闭关。</li>
+                        <li class="list-item"><span class="font-bold">技术架构:</span> Vue 3 + Vite + Composition API /
+                            Flask + SQLite + Socket.IO / DeepSeek AI API。</li>
+                        <li class="list-item"><span class="font-bold">前端开发:</span> 基于 Vue 3 Composition API 构建 18 个页面 +
+                            45+ 组件的前端 SPA，使用路由懒加载与 composables 实现逻辑复用。</li>
+                        <li class="list-item"><span class="font-bold">后端设计:</span> 后端采用 Flask Blueprint 模块化架构，拆分为 12
+                            个业务蓝图，实现关注点分离；设计 13 张 SQLite 数据表支撑业务数据持久化。</li>
+                        <li class="list-item"><span class="font-bold">核心功能:</span> 集成 Socket.IO
+                            实现实时消息推送与在线状态管理，支持即时聊天和系统通知。</li>
+                        <li class="list-item"><span class="font-bold">智能与认证:</span> 对接浙大教务系统抓取课表，自动匹配平台二手书资源；接入 DeepSeek
+                            AI 构建智能教材助手；实现浙大 CAS 统一身份认证与 JWT 会话管理。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 项目 3 -->
+            <div class="project-item collapsible">
+                <h4 class="project-title toggle-trigger">
+                    <span class="title-text-wrap">
+                        3. 杭州移景科技 · 量化系统开发 (实习生)
+                        <span class="toggle-icon">▼</span>
+                    </span>
+                    <span class="project-time">2026.02 – 2026.05</span>
+                </h4>
+                <div class="project-details"
+                    style="max-height: 0px; overflow: hidden; opacity: 0; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;">
+                    <ul class="custom-list">
+                        <li class="list-item"><span class="font-bold">工作内容:</span>
+                            开发量化交易辅助系统，涵盖数据采集、因子挖掘及策略回测，实现研究到生产的自动化闭环。</li>
+                        <li class="list-item"><span class="font-bold">策略优化:</span>
+                            设计维护核心高波动长影线、小市值及人气动量等策略，通过特征工程持续优化模型。</li>
+                        <li class="list-item"><span class="font-bold">系统开发:</span> 基于 MySQL 构建自动化行情库；开发市值过滤及 Alpha
+                            评价模块实现实时风险预警。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 项目 4 -->
+            <div class="project-item collapsible">
+                <h4 class="project-title toggle-trigger">
+                    <span class="title-text-wrap">
+                        4. 医院血液中心库存决策优化系统 (SRTP科研训练 | 核心成员)
+                        <span class="toggle-icon">▼</span>
+                    </span>
+                    <span class="project-time">2025.05 – 2026.05</span>
+                </h4>
+                <div class="project-details"
+                    style="max-height: 0px; overflow: hidden; opacity: 0; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;">
+                    <ul class="custom-list">
+                        <li class="list-item"><span class="font-bold">业务背景:</span>
+                            针对三甲医院血液中心“过期浪费”与“缺货短缺”双重风险，探索基于数据驱动 of 库存订货策略。</li>
+                        <li class="list-item"><span class="font-bold">模型构建:</span>
+                            设计了SEO(先预测后优化)与JEO(端到端联合优化)两套方案。在JEO方案中，基于DeepSets架构设计神经网络，直接从历史申请数据映射到最优订货量。</li>
+                        <li class="list-item"><span class="font-bold">策略评估:</span> 引入报童模型(Newsvendor
+                            Loss)作为损失函数，通过tau参数化模拟不同缺货/积压成本权重。</li>
+                        <li class="list-item"><span class="font-bold">结果量化:</span>
+                            实验表明，端到端优化(JEO)在业务成本控制上显著优于传统“先预测后优化”方法，并引入Prescriptive Power指标验证了模型相比SAA方法的决策质量提升。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="section-header collapsible" id="campus">
+            <div class="section-title-wrap toggle-trigger">
+                校园经历 (Campus Experience)
+                <span class="toggle-icon">▼</span>
+            </div>
+        </div>
+        <div class="campus-details"
+            style="max-height: 0px; overflow: hidden; opacity: 0; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;">
+            <div class="card-body">
+                <div class="exp-item">
+                    <h4 class="exp-title">1. 浙江大学心理健康协会</h4>
+                    <ul class="custom-list">
+                        <li class="list-item">日常运营与团队建设：协助日常社团运营，参与心理健康知识的校园科普宣传；策划并执行十余场心理互助主题活动。</li>
+                        <li class="list-item">核心素养收获：在活动多方对接中磨砺了敏捷的沟通表达与突出的项目执行力。</li>
+                    </ul>
+                </div>
+                <div class="exp-item">
+                    <h4 class="exp-title">2. 浙江大学管理学院党素培训部</h4>
+                    <ul class="custom-list">
+                        <li class="list-item">工作职责：主要协助开展学院入党积极分子的培训教育与日常实践考核工作，负责数十场培训讲座的前后期筹备与发言文稿总结。</li>
+                        <li class="list-item">核心素养收获：在高标准、严要求的事务处理中，锻炼了极度严谨务实的工作作风。</li>
+                    </ul>
+                </div>
+                <div class="exp-item">
+                    <h4 class="exp-title">3. 班级副班长、心理委员</h4>
+                    <ul class="custom-list">
+                        <li class="list-item">班级日常管理：高效协助班长处理班级日常事务管理、特色团日活动组织与重要教务信息传达，构建和谐有凝聚力的班级氛围。</li>
+                        <li class="list-item">心理关怀担当：积极履行心委职责，敏锐关注班级同学身心发展动态并建立日常沟通反馈，发挥院系与班级之间的心理桥梁作用。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="zen-entry">
@@ -257,6 +344,42 @@
     </div>
 
     <script src="game.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 绑定所有 toggle-trigger 的点击事件
+            var triggers = document.querySelectorAll('.toggle-trigger');
+            for (var i = 0; i < triggers.length; i++) {
+                triggers[i].addEventListener('click', function () {
+                    var collapsible = this.closest('.collapsible');
+                    if (!collapsible) return;
+
+                    // 切换 active 状态
+                    var isActive = collapsible.classList.toggle('active');
+
+                    // 查找 details 容器：先在子节点中找，再在兄弟节点中找
+                    var details = collapsible.querySelector('.project-details, .skill-details, .campus-details, .exp-details');
+                    if (!details) {
+                        var sib = collapsible.nextElementSibling;
+                        if (sib && (sib.classList.contains('skill-details') || sib.classList.contains('campus-details'))) {
+                            details = sib;
+                        }
+                    }
+
+                    if (!details) return;
+
+                    if (isActive) {
+                        details.style.maxHeight = details.scrollHeight + 'px';
+                        details.style.opacity = '1';
+                        details.style.marginTop = '12px';
+                    } else {
+                        details.style.maxHeight = '0';
+                        details.style.opacity = '0';
+                        details.style.marginTop = '0';
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

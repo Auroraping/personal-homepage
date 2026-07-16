@@ -704,3 +704,111 @@ h1, h2, h3, h4, .nav-name, .section-header {
         font-size: 1.5rem;
     }
 }
+
+/* 手风琴折叠项目经历样式 */
+.project-item.collapsible {
+    border-bottom: 1px solid var(--border-soft);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.project-item.collapsible:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.project-title.toggle-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition-smooth);
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.project-title.toggle-trigger:hover {
+    background-color: var(--bg-secondary);
+    color: var(--accent);
+}
+
+.title-text-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.toggle-icon {
+    display: inline-block;
+    font-size: 0.78rem;
+    color: #2563eb;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-left: 10px;
+    vertical-align: middle;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.project-item.active .toggle-icon,
+.section-header.collapsible.active .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+/* 折叠容器过渡动画 */
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;
+    margin-top: 0;
+}
+
+.project-item.active .project-details {
+    opacity: 1;
+    margin-top: 16px;
+}
+
+/* 技能与校园经历大板块折叠额外样式 */
+.section-header.collapsible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0 40px;
+}
+
+.section-header.collapsible .section-title-wrap.toggle-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition-smooth);
+}
+
+.section-header.collapsible .section-title-wrap.toggle-trigger:hover {
+    color: var(--accent);
+}
+
+.section-header.collapsible.active .toggle-icon {
+    transform: rotate(180deg);
+    color: var(--accent);
+}
+
+/* 技能与校园大折叠容器动画 */
+.skill-details, .campus-details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;
+    margin-top: 0;
+}
+
+
+
+
+
