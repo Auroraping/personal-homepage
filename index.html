@@ -236,14 +236,10 @@
                 <div class="project-details"
                     style="max-height: 0px; overflow: hidden; opacity: 0; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;">
                     <ul class="custom-list">
-                        <li class="list-item"><span class="font-bold">业务背景:</span>
-                            针对三甲医院血液中心“过期浪费”与“缺货短缺”双重风险，探索基于数据驱动 of 库存订货策略。</li>
-                        <li class="list-item"><span class="font-bold">模型构建:</span>
-                            设计了SEO(先预测后优化)与JEO(端到端联合优化)两套方案。在JEO方案中，基于DeepSets架构设计神经网络，直接从历史申请数据映射到最优订货量。</li>
-                        <li class="list-item"><span class="font-bold">策略评估:</span> 引入报童模型(Newsvendor
-                            Loss)作为损失函数，通过tau参数化模拟不同缺货/积压成本权重。</li>
-                        <li class="list-item"><span class="font-bold">结果量化:</span>
-                            实验表明，端到端优化(JEO)在业务成本控制上显著优于传统“先预测后优化”方法，并引入Prescriptive Power指标验证了模型相比SAA方法的决策质量提升。</li>
+                        <li class="list-item"><span class="font-bold">机制分析 (机器学习):</span>
+                            将血液订货决策建模为多期独立报童问题；运用随机森林、KNN、MLP等机器学习算法进行对比实验，剖析了传统先预测后优化(SEO)方法在概率预测上的系统性高估及误差放大机制。</li>
+                        <li class="list-item"><span class="font-bold">模型构建 (深度神经网络):</span>
+                            基于 DeepSets 神经网络架构构建端到端联合优化(JEO)模型，处理无序不定长的用血申请数据；采用平滑处理后的报童损失函数直接进行端到端网络训练，决策质量相比基线显著提升 20%。</li>
                     </ul>
                 </div>
             </div>
