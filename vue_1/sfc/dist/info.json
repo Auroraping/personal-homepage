@@ -1,0 +1,102 @@
+{
+  "name": {
+    "en": "Lei Wang",
+    "zh": "王磊"
+  },
+  "avatarUrl": "/images/new_avatar.jpg",
+  "title": "Lei Wang | Zhejiang University",
+  "intro": [
+    {
+      "type": "text",
+      "content": "<strong class=\"font-bold\">Lei Wang (王磊)</strong> is currently an undergraduate student at the <a href=\"http://www.som.zju.edu.cn/\" target=\"_blank\" class=\"som-link\">School of Management, Zhejiang University</a> (ZJU), majoring in Information Management and Information Systems. His research interests include <strong class=\"font-bold\">Python Data Science</strong>, Supply Chain Optimization, and Financial Engineering."
+    },
+    {
+      "type": "text",
+      "content": "He is also a multi-instrumentalist who plays <strong class=\"font-bold\">Guitar, Drums, and Pipa</strong>. He enjoys the intersection of rigorous data logic and artistic creativity."
+    }
+  ],
+  "contact": [
+    { "icon": "fa-solid fa-calendar", "text": "2005-04" },
+    { "icon": "fa-solid fa-venus-mars", "text": "男 · 汉族" },
+    { "icon": "fa-solid fa-location-dot", "text": "四川 · 共青团员" },
+    { "icon": "fa-solid fa-envelope", "text": "3481618383@qq.com" },
+    { "icon": "fa-solid fa-phone", "text": "13198491268" },
+    { "icon": "fa-brands fa-weixin", "text": "MrThreestone666" }
+  ],
+  "lifestyle": [
+    {
+      "icon": "🐼",
+      "label": "四川血统",
+      "desc": "生于巴蜀，自带火锅基因，性格爽利。",
+      "cardClass": "card-sichuan"
+    },
+    {
+      "icon": "🌶️",
+      "label": "无辣不欢",
+      "desc": "对辣椒有极高忠诚度，认为美食的灵魂在于红油。",
+      "cardClass": "card-spicy"
+    },
+    {
+      "icon": "🀄",
+      "label": "雀魂研究员",
+      "desc": "致力于研究马尔可夫链在成都麻将中的实战应用。",
+      "cardClass": "card-mahjong"
+    }
+  ],
+  "evaluation": "具备扎实的专业基础，掌握Python编程、机器学习、数据库等相关技术，拥有丰富的项目实践经历，具备较强的代码实现能力与问题解决能力。在校期间担任多项学生职务，具备良好的团队协作、沟通协调与组织管理能力。工作态度认真负责，学习能力强，能快速适应新环境与新任务，积极主动完成各项工作，期待在寒假实习中积累实践经验，提升专业技能。",
+  "education": [
+    {
+      "school": "浙江大学 (Zhejiang University)",
+      "period": "2023-09 ~ 至今",
+      "major": "信息管理与信息系统（本科）",
+      "courses": "Python、C语言、商务数据挖掘、数据库技术、运筹学、管理统计"
+    }
+  ],
+  "skills": [
+    {
+      "category": "编程语言",
+      "detail": "Python (Pandas, NumPy, Scikit-learn, PyTorch), SQL (熟练掌握多表查询、窗口函数、子查询), MATLAB"
+    },
+    {
+      "category": "数据分析与挖掘",
+      "detail": "掌握随机森林、LightGBM、LSTM等机器学习算法; 熟悉A/B Test实验设计; 具备良好的特征工程与EDA(探索性数据分析)能力"
+    },
+    {
+      "category": "数据可视化",
+      "detail": "Matplotlib, Seaborn, Tableau/PowerBI"
+    },
+    {
+      "category": "通用技能",
+      "detail": "英文文献阅读能力, Latex论文排版, 数学建模"
+    }
+  ],
+  "campus": [
+    {
+      "title": "浙江大学心理健康协会",
+      "details": [
+        "参与协会组织的心理健康科普宣传、心理互助活动策划与执行，具备良好的沟通表达能力"
+      ]
+    },
+    {
+      "title": "浙江大学管理学院党素培训部",
+      "details": [
+        "系统学习党的理论知识与方针政策，参与党性修养实践活动，提升思想政治觉悟与责任担当意识",
+        "完成培训期间的学习任务与考核，撰写学习心得，强化服务意识与团队协作精神"
+      ]
+    },
+    {
+      "title": "班级副班长、心理委员",
+      "details": [
+        "协助班长完成班级日常管理、活动组织与信息传达工作，协调班级同学关系，营造良好班级氛围",
+        "履行心理委员职责，关注班级同学心理健康状况，协助学院开展心理健康相关工作，保障班级同学身心健康"
+      ]
+    }
+  ],
+  "navLinks": [
+    { "label": "About", "href": "#about" },
+    { "label": "Education", "href": "#education" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "Reading", "href": "#reading" }
+  ],
+  "footer": "Copyright © 2026 Lei Wang. All Rights Reserved. | Zhejiang University"
+}
