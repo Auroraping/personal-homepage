@@ -255,8 +255,8 @@
             </div>
             <div class="item-subtitle">核心成员</div>
             <ul>
-                <li><strong>模型构建:</strong> 针对血液中心风险，设计基于 DeepSets 架构的端到端联合优化 (JEO) 模型，直接从历史数据映射最优订货量。</li>
-                <li><strong>策略评估:</strong> 引入报童模型 (Newsvendor Loss) 作为损失函数，实验表明 JEO 在业务成本控制及决策质量上显著优于传统方法。</li>
+                <li><strong>问题建模与机理分析:</strong> 针对血液短缺且易逝的业务特性，将订货决策建模为多期独立报童问题；深入剖析了传统先预测后优化(SEO)方法中机器学习算法的系统性高估及分位数误差放大机制。</li>
+                <li><strong>端到端优化与验证:</strong> 设计基于 DeepSets 的端到端联合优化(JEO)模型以处理无序不定长的微观用血申请，并直接采用平滑处理后的报童损失函数进行训练；实验表明 JEO 决策质量(Prescriptiveness)相比 SAA 基线稳定提升 20%。</li>
             </ul>
         </div>
     </div>
