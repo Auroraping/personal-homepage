@@ -23,6 +23,8 @@
                 <a class="nav-link" href="#about">About</a>
                 <a class="nav-link" href="#education">Education</a>
                 <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="resume_da.html" target="_blank" style="color: #2563eb !important; font-weight: 600;"><i class="fa-solid fa-chart-line"></i> DA简历</a>
+                <a class="nav-link" href="resume_pm.html" target="_blank" style="color: #7c3aed !important; font-weight: 600;"><i class="fa-solid fa-wand-magic-sparkles"></i> AI PM简历</a>
             </div>
         </div>
     </div>
@@ -31,7 +33,19 @@
 
         <div class="header-section" id="about">
             <div class="avatar-wrap">
-                <img src="images/new_avatar.jpg" class="avatar-img" alt="avatar">
+                <div class="avatar-container" onclick="openPhotoModal()" title="点击查看大图">
+                    <img id="userAvatar" src="images/new_avatar.jpg" class="avatar-img" alt="王磊 - 生活照" data-type="life">
+                    <span class="avatar-badge" id="avatarBadge">生活照</span>
+                </div>
+
+                <div class="photo-toggle-bar">
+                    <button type="button" class="photo-tab-btn active" id="btnLifePhoto" data-photo="life" onclick="switchPhoto('life')">
+                        <i class="fa-solid fa-camera"></i> 生活照
+                    </button>
+                    <button type="button" class="photo-tab-btn" id="btnIdPhoto" data-photo="id" onclick="switchPhoto('id')">
+                        <i class="fa-solid fa-id-badge"></i> 证件照
+                    </button>
+                </div>
 
                 <div class="contact-info">
                     <div class="contact-item">
@@ -57,6 +71,15 @@
                     <div class="contact-item-last">
                         <span class="fa-brands fa-weixin contact-icon"></span>
                         <span class="contact-text">Mrthreestone666</span>
+                    </div>
+
+                    <div class="resume-quick-btns" style="margin-top: 14px; display: flex; flex-direction: column; gap: 8px; width: 100%;">
+                        <a href="resume_da.html" target="_blank" class="resume-btn resume-btn-da" style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 10px; background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; border-radius: 8px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: 0.2s;">
+                            <i class="fa-solid fa-chart-line"></i> 投递简历 · 数据分析
+                        </a>
+                        <a href="resume_pm.html" target="_blank" class="resume-btn resume-btn-pm" style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 7px 10px; background: #faf5ff; color: #6d28d9; border: 1px solid #ddd6fe; border-radius: 8px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: 0.2s;">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> 投递简历 · AI产品经理
+                        </a>
                     </div>
                 </div>
             </div>
@@ -139,9 +162,8 @@
                 <ul class="custom-list">
                     <li class="list-item"><span class="font-bold">编程语言:</span> Python (Pandas, NumPy, Scikit-learn,
                         PyTorch), SQL (熟练掌握多表查询、窗口函数、子查询), MATLAB</li>
-                    <li class="list-item"><span class="font-bold">数据分析与挖掘:</span> 掌握随机森林、LightGBM、LSTM等机器学习算法; 熟悉 A/B
-                        Test 实验设计; 具备良好的特征工程与 EDA (探索性数据分析) 能力</li>
-                    <li class="list-item"><span class="font-bold">数据可视化:</span> Matplotlib, Seaborn, Tableau / PowerBI
+                    <li class="list-item"><span class="font-bold">数据分析与工程:</span> 掌握机器学习算法; 熟悉 A/B Test 实验设计; 熟练运用 RPA 自动化脚本、数仓分层规范 (ODS/DWD/DWS/ADS) 与 Workflow 工作流调度</li>
+                    <li class="list-item"><span class="font-bold">数据可视化:</span> 数据驾驶舱/看板搭建, Matplotlib, Seaborn, Tableau / PowerBI
                     </li>
                     <li class="list-item"><span class="font-bold">通用技能:</span> 英文文献阅读能力, LaTeX 论文排版, 数学建模</li>
                 </ul>
@@ -155,7 +177,31 @@
             <div class="project-item collapsible">
                 <h4 class="project-title toggle-trigger">
                     <span class="title-text-wrap">
-                        1. “智汇宝”外汇衍生品管理系统 (杭州幻视金融 · 产品经理实习生)
+                        1. 王小卤 · 数据驾驶舱与自动化对账系统 (AI数据实习生)
+                        <span class="toggle-icon">▼</span>
+                    </span>
+                    <span class="project-time">2026.08 – 至今</span>
+                </h4>
+                <div class="project-details"
+                    style="max-height: 0px; overflow: hidden; opacity: 0; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;">
+                    <ul class="custom-list">
+                        <li class="list-item"><span class="font-bold">业务背景:</span>
+                            面向多电商平台经营数据管理需求，搭建企业级数据驾驶舱，实现营业收入、平台管理费用、达人佣金等关键数据的统一录入、集中管理与自动化对账。</li>
+                        <li class="list-item"><span class="font-bold">数据采集与清洗 (ODS / DWD):</span>
+                            基于 RPA 工具编写自动化脚本定时抓取多电商平台业务流水与费用明细，沉淀至贴源数据层 (ODS)；制定清洗校验规则，对异构数据进行清洗规范与字段对齐，构建标准化明细层 (DWD)。</li>
+                        <li class="list-item"><span class="font-bold">Workflow编排与聚合计算 (DWS):</span>
+                            编写并编排自动化 Workflow 工作流，实现数据的增量更新、多维指标聚合与自动化收支对账校验，保障数据链路的高时效性与账务一致性。</li>
+                        <li class="list-item"><span class="font-bold">驾驶舱呈现与决策支持 (ADS):</span>
+                            基于应用数据服务层 (ADS) 搭建动态交互式数据驾驶舱看板，直观监控各渠道营业收入、平台扣费比例、达人带货ROI与对账异常，为管理层与业务运营提供实时决策支持。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 项目 2 -->
+            <div class="project-item collapsible">
+                <h4 class="project-title toggle-trigger">
+                    <span class="title-text-wrap">
+                        2. “智汇宝”外汇衍生品管理系统 (杭州幻视金融 · 产品经理实习生)
                         <span class="toggle-icon">▼</span>
                     </span>
                     <span class="project-time">2026.05 – 2026.07</span>
@@ -174,11 +220,11 @@
                 </div>
             </div>
 
-            <!-- 项目 2 -->
+            <!-- 项目 3 -->
             <div class="project-item collapsible">
                 <h4 class="project-title toggle-trigger">
                     <span class="title-text-wrap">
-                        2. 浙里淘书 (zook) · 校园二手教材交易平台 (个人项目)
+                        3. 浙里淘书 (zook) · 校园二手教材交易平台 (个人项目)
                         <span class="toggle-icon">▼</span>
                     </span>
                     <span class="project-time">2026.04 – 2026.06</span>
@@ -202,11 +248,11 @@
                 </div>
             </div>
 
-            <!-- 项目 3 -->
+            <!-- 项目 4 -->
             <div class="project-item collapsible">
                 <h4 class="project-title toggle-trigger">
                     <span class="title-text-wrap">
-                        3. 杭州移景科技 · 量化系统开发 (Python开发实习生)
+                        4. 杭州移景科技 · 量化系统开发 (Python开发实习生)
                         <span class="toggle-icon">▼</span>
                     </span>
                     <span class="project-time">2026.02 – 2026.05</span>
@@ -224,11 +270,11 @@
                 </div>
             </div>
 
-            <!-- 项目 4 -->
+            <!-- 项目 5 -->
             <div class="project-item collapsible">
                 <h4 class="project-title toggle-trigger">
                     <span class="title-text-wrap">
-                        4. 医院血液中心库存决策优化系统 (SRTP科研训练 | 核心成员)
+                        5. 医院血液中心库存决策优化系统 (SRTP科研训练 | 核心成员)
                         <span class="toggle-icon">▼</span>
                     </span>
                     <span class="project-time">2025.05 – 2026.05</span>
@@ -338,8 +384,88 @@
         Copyright © 2026 Lei Wang. All Rights Reserved. | Zhejiang University
     </div>
 
+    <!-- 头像大图预览模态框 -->
+    <div class="avatar-modal" id="avatarModal" onclick="closePhotoModal(event)">
+        <div class="avatar-modal-content" onclick="event.stopPropagation()">
+            <button type="button" class="avatar-modal-close" onclick="closePhotoModal()" title="关闭">&times;</button>
+            <img id="modalAvatarImg" src="images/new_avatar.jpg" class="avatar-modal-img" alt="照片预览">
+            <div class="avatar-modal-title" id="modalAvatarTitle">生活照</div>
+        </div>
+    </div>
+
     <script src="game.js"></script>
     <script>
+        // 照片切换与预览配置
+        var photoConfig = {
+            life: {
+                src: 'images/new_avatar.jpg',
+                name: '生活照',
+                alt: '王磊 - 生活照'
+            },
+            id: {
+                src: 'images/id_photo.png',
+                name: '证件照',
+                alt: '王磊 - 证件照'
+            }
+        };
+
+        function switchPhoto(type) {
+            var avatar = document.getElementById('userAvatar');
+            var badge = document.getElementById('avatarBadge');
+            var btnLife = document.getElementById('btnLifePhoto');
+            var btnId = document.getElementById('btnIdPhoto');
+            if (!avatar || !photoConfig[type]) return;
+
+            if (avatar.getAttribute('data-type') === type) return;
+
+            avatar.classList.add('switching');
+            setTimeout(function () {
+                avatar.src = photoConfig[type].src;
+                avatar.alt = photoConfig[type].alt;
+                avatar.setAttribute('data-type', type);
+                if (badge) badge.textContent = photoConfig[type].name;
+
+                if (type === 'life') {
+                    if (btnLife) btnLife.classList.add('active');
+                    if (btnId) btnId.classList.remove('active');
+                } else {
+                    if (btnId) btnId.classList.add('active');
+                    if (btnLife) btnLife.classList.remove('active');
+                }
+
+                var modalImg = document.getElementById('modalAvatarImg');
+                var modalTitle = document.getElementById('modalAvatarTitle');
+                if (modalImg) modalImg.src = photoConfig[type].src;
+                if (modalTitle) modalTitle.textContent = photoConfig[type].name;
+
+                avatar.classList.remove('switching');
+            }, 180);
+        }
+
+        function openPhotoModal() {
+            var avatar = document.getElementById('userAvatar');
+            var currentType = avatar ? (avatar.getAttribute('data-type') || 'life') : 'life';
+            var modal = document.getElementById('avatarModal');
+            var modalImg = document.getElementById('modalAvatarImg');
+            var modalTitle = document.getElementById('modalAvatarTitle');
+            if (modal && modalImg && photoConfig[currentType]) {
+                modalImg.src = photoConfig[currentType].src;
+                if (modalTitle) modalTitle.textContent = photoConfig[currentType].name;
+                modal.classList.add('active');
+            }
+        }
+
+        function closePhotoModal(e) {
+            var modal = document.getElementById('avatarModal');
+            if (modal) modal.classList.remove('active');
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                closePhotoModal();
+            }
+        });
+
         document.addEventListener('DOMContentLoaded', function () {
             // 绑定所有 toggle-trigger 的点击事件
             var triggers = document.querySelectorAll('.toggle-trigger');

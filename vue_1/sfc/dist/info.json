@@ -95,8 +95,7 @@
   "navLinks": [
     { "label": "About", "href": "#about" },
     { "label": "Education", "href": "#education" },
-    { "label": "Projects", "href": "#projects" },
-    { "label": "Reading", "href": "#reading" }
+    { "label": "Projects", "href": "#projects" }
   ],
   "footer": "Copyright © 2026 Lei Wang. All Rights Reserved. | Zhejiang University"
 }
