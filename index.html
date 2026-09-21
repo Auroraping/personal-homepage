@@ -22,6 +22,7 @@
             <div class="nav-links">
                 <a class="nav-link" href="#about">About</a>
                 <a class="nav-link" href="#education">Education</a>
+                <a class="nav-link" href="#internship">Internships</a>
                 <a class="nav-link" href="#projects">Projects</a>
                 <a class="nav-link" href="resume_da.html" target="_blank" style="color: #2563eb !important; font-weight: 600;"><i class="fa-solid fa-chart-line"></i> DA简历</a>
                 <a class="nav-link" href="resume_pm.html" target="_blank" style="color: #7c3aed !important; font-weight: 600;"><i class="fa-solid fa-wand-magic-sparkles"></i> AI PM简历</a>
@@ -34,15 +35,15 @@
         <div class="header-section" id="about">
             <div class="avatar-wrap">
                 <div class="avatar-container" onclick="openPhotoModal()" title="点击查看大图">
-                    <img id="userAvatar" src="images/new_avatar.jpg" class="avatar-img" alt="王磊 - 生活照" data-type="life">
-                    <span class="avatar-badge" id="avatarBadge">生活照</span>
+                    <img id="userAvatar" src="images/id_photo.png" class="avatar-img" alt="王磊 - 证件照" data-type="id">
+                    <span class="avatar-badge" id="avatarBadge">证件照</span>
                 </div>
 
                 <div class="photo-toggle-bar">
-                    <button type="button" class="photo-tab-btn active" id="btnLifePhoto" data-photo="life" onclick="switchPhoto('life')">
+                    <button type="button" class="photo-tab-btn" id="btnLifePhoto" data-photo="life" onclick="switchPhoto('life')">
                         <i class="fa-solid fa-camera"></i> 生活照
                     </button>
-                    <button type="button" class="photo-tab-btn" id="btnIdPhoto" data-photo="id" onclick="switchPhoto('id')">
+                    <button type="button" class="photo-tab-btn active" id="btnIdPhoto" data-photo="id" onclick="switchPhoto('id')">
                         <i class="fa-solid fa-id-badge"></i> 证件照
                     </button>
                 </div>
@@ -170,10 +171,10 @@
             </div>
         </div>
 
-        <div class="section-header" id="projects">项目经历 (Project Experience)</div>
+        <div class="section-header" id="internship">实习经历 (Internship Experience)</div>
 
         <div class="card-body">
-            <!-- 项目 1 -->
+            <!-- 实习 1: 王小卤 -->
             <div class="project-item collapsible">
                 <h4 class="project-title toggle-trigger">
                     <span class="title-text-wrap">
@@ -197,7 +198,7 @@
                 </div>
             </div>
 
-            <!-- 项目 2 -->
+            <!-- 实习 2: 幻视金融 -->
             <div class="project-item collapsible">
                 <h4 class="project-title toggle-trigger">
                     <span class="title-text-wrap">
@@ -220,11 +221,37 @@
                 </div>
             </div>
 
-            <!-- 项目 3 -->
+            <!-- 实习 3: 移景科技 -->
             <div class="project-item collapsible">
                 <h4 class="project-title toggle-trigger">
                     <span class="title-text-wrap">
-                        3. 浙里淘书 (zook) · 校园二手教材交易平台 (个人项目)
+                        3. 杭州移景科技 · 量化系统开发 (Python开发实习生)
+                        <span class="toggle-icon">▼</span>
+                    </span>
+                    <span class="project-time">2026.02 – 2026.05</span>
+                </h4>
+                <div class="project-details"
+                    style="max-height: 0px; overflow: hidden; opacity: 0; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;">
+                    <ul class="custom-list">
+                        <li class="list-item"><span class="font-bold">工作内容:</span>
+                            开发量化交易辅助系统，涵盖数据采集、因子挖掘及策略回测，实现研究到生产的自动化闭环。</li>
+                        <li class="list-item"><span class="font-bold">策略优化:</span>
+                            设计维护核心高波动长影线、小市值及人气动量等策略，通过特征工程持续优化模型。</li>
+                        <li class="list-item"><span class="font-bold">系统开发:</span> 基于 MySQL 构建自动化行情库；开发市值过滤及 Alpha
+                            评价模块实现实时风险预警。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header" id="projects">项目经历 (Project Experience)</div>
+
+        <div class="card-body">
+            <!-- 项目 1: 浙里淘书 -->
+            <div class="project-item collapsible">
+                <h4 class="project-title toggle-trigger">
+                    <span class="title-text-wrap">
+                        1. 浙里淘书 (zook) · 校园二手教材交易平台 (个人项目)
                         <span class="toggle-icon">▼</span>
                     </span>
                     <span class="project-time">2026.04 – 2026.06</span>
@@ -248,33 +275,11 @@
                 </div>
             </div>
 
-            <!-- 项目 4 -->
+            <!-- 项目 2: 血液中心SRTP -->
             <div class="project-item collapsible">
                 <h4 class="project-title toggle-trigger">
                     <span class="title-text-wrap">
-                        4. 杭州移景科技 · 量化系统开发 (Python开发实习生)
-                        <span class="toggle-icon">▼</span>
-                    </span>
-                    <span class="project-time">2026.02 – 2026.05</span>
-                </h4>
-                <div class="project-details"
-                    style="max-height: 0px; overflow: hidden; opacity: 0; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), margin 0.4s ease;">
-                    <ul class="custom-list">
-                        <li class="list-item"><span class="font-bold">工作内容:</span>
-                            开发量化交易辅助系统，涵盖数据采集、因子挖掘及策略回测，实现研究到生产的自动化闭环。</li>
-                        <li class="list-item"><span class="font-bold">策略优化:</span>
-                            设计维护核心高波动长影线、小市值及人气动量等策略，通过特征工程持续优化模型。</li>
-                        <li class="list-item"><span class="font-bold">系统开发:</span> 基于 MySQL 构建自动化行情库；开发市值过滤及 Alpha
-                            评价模块实现实时风险预警。</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 项目 5 -->
-            <div class="project-item collapsible">
-                <h4 class="project-title toggle-trigger">
-                    <span class="title-text-wrap">
-                        5. 医院血液中心库存决策优化系统 (SRTP科研训练 | 核心成员)
+                        2. 医院血液中心库存决策优化系统 (SRTP科研训练 | 核心成员)
                         <span class="toggle-icon">▼</span>
                     </span>
                     <span class="project-time">2025.05 – 2026.05</span>
@@ -388,7 +393,7 @@
     <div class="avatar-modal" id="avatarModal" onclick="closePhotoModal(event)">
         <div class="avatar-modal-content" onclick="event.stopPropagation()">
             <button type="button" class="avatar-modal-close" onclick="closePhotoModal()" title="关闭">&times;</button>
-            <img id="modalAvatarImg" src="images/new_avatar.jpg" class="avatar-modal-img" alt="照片预览">
+            <img id="modalAvatarImg" src="images/id_photo.png" class="avatar-modal-img" alt="照片预览">
             <div class="avatar-modal-title" id="modalAvatarTitle">生活照</div>
         </div>
     </div>
@@ -444,7 +449,7 @@
 
         function openPhotoModal() {
             var avatar = document.getElementById('userAvatar');
-            var currentType = avatar ? (avatar.getAttribute('data-type') || 'life') : 'life';
+            var currentType = avatar ? (avatar.getAttribute('data-type') || 'id') : 'id';
             var modal = document.getElementById('avatarModal');
             var modalImg = document.getElementById('modalAvatarImg');
             var modalTitle = document.getElementById('modalAvatarTitle');

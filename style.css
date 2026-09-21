@@ -116,8 +116,14 @@ h1, h2, h3, h4, .nav-name, .section-header {
     display: block;
 }
 
+/* 证件照：竖版长方形相框 + 整体缩放显示（contain），保证人像完整不裁切 */
 .avatar-img[data-type="id"] {
-    object-position: center 8%;
+    width: 120px;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: contain;
+    object-position: center center;
+    background: #ffffff;
 }
 
 .avatar-img:hover {
