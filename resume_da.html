@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>王磊 (Lei Wang) - 个人简历 (数据分析方向)</title>
+    <title>王磊 - 个人简历 (数据分析方向)</title>
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -305,7 +305,7 @@
         <div class="header-container">
             <div class="header-text">
                 <div class="name-row">
-                    <h1>王磊 (Lei Wang)</h1>
+                    <h1>王磊</h1>
                 </div>
                 <div class="contact-info">
                     <span><i class="fa-solid fa-envelope"></i> <a href="mailto:3481618383@qq.com">3481618383@qq.com</a></span> |
@@ -345,7 +345,7 @@
             <h2><i class="fa-solid fa-screwdriver-wrench"></i> 专业技能 (Professional Skills)</h2>
             <p class="skills-p">
                 <strong>编程与数据处理:</strong> 精通 Python (熟练运用 Pandas、NumPy 进行数据清洗、EDA 与建模)；精通 SQL (熟练掌握窗口函数、多表联查、子查询、复杂聚合及索引优化)；熟练使用 MATLAB。<br>
-                <strong>数仓与数据工程:</strong> 熟练掌握数仓分层规范 (ODS 贴源层 / DWD 明细层 / DWS 汇总层 / ADS 应用层)；熟练使用 RPA 自动化数据采集，具备自动化 Workflow 编排调度与增量 ETL 管道设计能力。<br>
+                <strong>数仓与数据工程:</strong> 熟练掌握数仓分层规范 (ODS 贴源层 / DWD 明细层 / DWS 汇总层 / ADS 应用层)；熟练使用影刀 RPA 自动化数据采集，具备自动化 Workflow 编排调度与增量 ETL 管道设计能力。<br>
                 <strong>算法模型与分析方法:</strong> 掌握随机森林、LightGBM、KNN、深度神经网络等模型；具备 A/B Test 实验设计、特征工程、因果推断、漏斗转化与多期报童运筹决策建模能力。<br>
                 <strong>商业可视化与洞察:</strong> 具备企业级数据驾驶舱搭建经验；熟练运用 Tableau、PowerBI、Matplotlib、Seaborn 制作多维交互看板；具备优秀的财务勾稽对账与业务数据异动归因能力。
             </p>
@@ -359,15 +359,15 @@
             <div class="item">
                 <div class="item-header">
                     <div class="item-left">
-                        <span class="item-title">王小卤 · 电商数仓分层建设与数据驾驶舱自动化对账系统</span>
+                        <span class="item-title">王小卤 · 电商多平台数据采集与数仓流水线建设</span>
                         <span class="item-subtitle">AI数据实习生</span>
                     </div>
                     <span class="item-date">2026.08 – 至今</span>
                 </div>
                 <ul>
-                    <li><strong>数仓链路规范搭建 (ODS→DWD):</strong> 针对全渠道电商异构数据孤岛痛点，运用 RPA 脚本实现各平台原始销售流水与费用明细的定时自动化采集入库 (ODS)；制定异常值过滤与统一字段对齐机制，沉淀高质量标准化明细宽表 (DWD)。</li>
-                    <li><strong>指标体系与自动化勾稽对账 (DWS):</strong> 梳理电商全链路财务与运营指标，编排定时增量 Workflow 工作流，构建多维交叉聚合与平台扣点/达人佣金收支勾稽对账算法模型，将原先人工核对耗时降低 70% 以上。</li>
-                    <li><strong>交互看板与经营归因 (ADS):</strong> 基于应用数据层搭建交互式数据驾驶舱看板，直观呈现全渠道营收、费用结构与佣金差异，通过异常归因分析协助财务及业务运营快速定位错账漏账。</li>
+                    <li><strong>RPA 多平台数据采集 (影刀):</strong> 以影刀 RPA 打通 8 平台 × 出库/支付双口径的源数据采集链路，自动登录电商与广告后台下载并规范归档旺店通出库/支付流水、千川与京准通/磁力金牛投流、平台账单及佣金成本维表，把人工逐平台导出转为无人值守采集；沉淀源文件命名契约与校验规则。</li>
+                    <li><strong>数仓流水线 Skill 化与数据质量治理:</strong> 将成本匹配、订单合并、费用分摊与多维聚合封装为可复用 skill (SKILL.md 契约 + 共享工具 + 契约守卫)，实现分块流式解析、脏数据过滤 (0 值日期/空行/乱码)、料号/品类/日期三重归一与三元组去重、月份级覆盖写入与复合覆盖索引；双口径多进程并发跑数使整链耗时缩短 50%~60%，线上同步经流式 Gzip 压缩由 5 分钟压至 40 秒。</li>
+                    <li><strong>进销存数智驾驶舱 (独立开发 0→1):</strong> 自建 16 Sheet → 17 表 + 9 索引的 Excel 幂等入库管道与连接池 + 版本戳查询缓存；设计 14 项发布质检门禁 (表结构、行数下限、3 项跨表勾稽、Excel 错误值、归一化与去重，实测差额为 0)；建设 14 个指标的口径推导引擎 (公式→代入→入参溯源) 与 DeepSeek 双档 AI 分析助手 (SSE 流式 + 提问前装配库内事实)，输出经营归因与风险预警。</li>
                 </ul>
             </div>
 
@@ -375,14 +375,15 @@
             <div class="item">
                 <div class="item-header">
                     <div class="item-left">
-                        <span class="item-title">“智汇宝”外汇衍生品管理系统 (杭州幻视金融)</span>
+                        <span class="item-title">外汇风险管理系统 · 套保分析与风险计量设计 (杭州幻视金融)</span>
                         <span class="item-subtitle">产品经理实习生</span>
                     </div>
-                    <span class="item-date">2026.05 – 2026.07</span>
+                    <span class="item-date">2026.06 – 2026.07</span>
                 </div>
                 <ul>
-                    <li><strong>产品需求与算法定义:</strong> 负责“保底汇率测算”及“套期损益回测”核心模块的需求规格撰写与量化算法定义；基于历史高频汇率时序明确边界汇率与期望税前利润敏感性分析的产品口径，量化评估锁汇与敞口策略的综合收益分布。</li>
-                    <li><strong>AI助手需求定义与效果验证:</strong> 梳理汇率波动对企业毛利润的冲击弹性与套保损益评估矩阵等业务指标；协助外汇大模型分析助手开展用例测试，对外汇问答与策略推荐的召回率与准确性进行定量验证。</li>
+                    <li><strong>套保分析量化口径:</strong> 定义保底汇率 (进口/出口两套公式，以期望税前利润反推管控汇率)、边界汇率 (即期汇率 × 利率平价系数) 与敞口/交易试算的综合损益及基准口径；沉淀远期汇率月度节点线性插值与累计损益时间序列递推的回测计算规则。</li>
+                    <li><strong>衍生品损益与有效性规则:</strong> 为基准/远期/期权/掉期/欧式障碍期权 (EKI·EKO)/目标障碍远期 (TRF) 六类策略定义四象限损益公式与 TRF 敲出、杠杆规则；套期有效性按累计比率法/期间比率法/回归分析法在 80%–125% 区间判定。</li>
+                    <li><strong>风险计量方案:</strong> 设计外汇 VaR 三种算法 (正态分布/历史模拟/蒙特卡洛) 及 VaR·MVaR·CVaR·IVaR 与风险贡献输出口径、敏感性双向冲击、压力情景因子矩阵 (变动类型含旋转、幅度支持 %/BP/汇率点位) 与期权定价 Greek 反显。</li>
                 </ul>
             </div>
 
@@ -390,14 +391,15 @@
             <div class="item">
                 <div class="item-header">
                     <div class="item-left">
-                        <span class="item-title">杭州移景科技 · 量化策略辅助系统开发</span>
+                        <span class="item-title">杭州移景科技 · 量化数据管道与策略回测</span>
                         <span class="item-subtitle">Python量化开发实习生</span>
                     </div>
                     <span class="item-date">2026.02 – 2026.05</span>
                 </div>
                 <ul>
-                    <li><strong>时序数据管道与行情库构建:</strong> 开发量化交易辅助系统，运用 Python 采集清洗高频金融时序数据，基于 MySQL 构建具备时间序列索引的高效行情库，保障多策略并发回测时的高吞吐读写。</li>
-                    <li><strong>特征工程与因子挖掘:</strong> 针对长影线形态、小市值及动量特征构建量化因子，对因子收益率、IC值及多空换手率进行回测评估；设计构建实时市值过滤与波动率风险预警模块。</li>
+                    <li><strong>行情数据管道与 MySQL 建库:</strong> 用 Tushare / AkShare 搭建日频 ETL (交易日历驱动、按交易日“先删后插”、chunksize=1000 批量写入、锁超时退避重试、板块与大盘 upsert)；设计 18 字段日线因子表 (复合唯一键 + 双单列索引) 与复合主键的板块/大盘表。</li>
+                    <li><strong>因子构建与回测评估:</strong> 自研长影线多空分歧度因子 (影线 / 收盘归一 + 双路径打分 + 5 日选 4 日) 与换手率分位过滤、大盘 MA20 熔断等风控闸门；实现 T+1 回测与双账户资金仿真，以“平均年收益 − 1.5 × 年收益标准差”做 4 维 72 组网格择优，产出 2023–2025 约 5,200 笔卖出的月度绩效 (累计收益/基准 Alpha/胜率/资金利用率)。</li>
+                    <li><strong>分层风险与特征工程:</strong> 构建 15 市值分位 × 1,505 交易日分层收益矩阵，并沉淀 24 个基础特征与多窗口滞后特征 (涨跌家数比、板块涨跌离散度、大盘乖离与量能、截面偏度/峰度)，训练 PyTorch MLP (以 R² 与方向准确率评估) 输出每日规避名单；完成小市值概念板块组合的配额分配与板块归因。</li>
                 </ul>
             </div>
         </div>
@@ -416,8 +418,8 @@
                     <span class="item-date">2026.04 – 2026.06</span>
                 </div>
                 <ul>
-                    <li><strong>全链路埋点与转化漏斗:</strong> 针对 C2C 交易全流程（搜书、下单、支付、评价）设计端到端用户行为数据埋点方案；构建转化与流失漏斗模型，精准定位高跳出率环节并针对性优化页面流程。</li>
-                    <li><strong>供需匹配与智能算法评估:</strong> 统计分析各专业教材供需分布，运用文本相似度加权匹配算法自动关联浙大课表与平台教材库；监控 DeepSeek AI 助手的会话留存率与意图识别准确率，以数据驱动 Prompt 持续迭代。</li>
+                    <li><strong>全栈工程与数据层改造:</strong> 主导 JSON → SQLite 数据层适配器重构 (12 个蓝图 API 零改动)、18 张表设计与启动迁移/快照恢复机制。</li>
+                    <li><strong>交易状态机与 IM 系统:</strong> 实现订单双向确认状态机 (unpaid→paid→delivered→completed，副作用分离 + 买卖方权限隔离) 与站内 IM (Socket.IO 房间定向投递、消息双写落库、未读/已读与图片消息)。</li>
                 </ul>
             </div>
 
@@ -425,14 +427,14 @@
             <div class="item">
                 <div class="item-header">
                     <div class="item-left">
-                        <span class="item-title">医院血液中心库存决策优化系统 (国家级SRTP科研项目)</span>
-                        <span class="item-subtitle">核心研究成员</span>
+                        <span class="item-title">医院血液中心库存决策优化系统 (SRTP科研项目)</span>
+                        <span class="item-subtitle">核心负责人</span>
                     </div>
                     <span class="item-date">2025.05 – 2026.05</span>
                 </div>
                 <ul>
-                    <li><strong>运筹优化机制剖析:</strong> 将医院血液订货建模为多期独立报童问题；对比随机森林、KNN、MLP 等机器学习算法，实证剖析了传统先预测后优化(SEO)方法在非对称损失下因概率密度估计偏差导致的系统性高估机制。</li>
-                    <li><strong>端到端深度学习 (JEO):</strong> 针对不定长用血申请，基于 DeepSets 架构构建端到端联合优化模型，采用平滑报童损失函数直接训练网络，决策质量相比传统统计基线显著提升 <strong>20%</strong>。</li>
+                    <li><strong>运筹建模与机理剖析:</strong> 将血液订货建模为多期独立报童问题 (c_p=τ, c_h=1−τ，9 档临界分位 0.50–0.90)，给出三阶段偏差分解 Bias_τ ≈ Δμ + z_τ·Δσ；实测 RF/KNN/MLP 概率预测的隐含发血率 19.9%/16.8%/15.5% vs 真实 14.0%，定量解释 SEO 的系统性高估及偏差随 τ 放大的机制。</li>
+                    <li><strong>端到端深度学习 (JEO):</strong> 面向无序不定长用血申请，用 DeepSets (padding+mask + 集合池化) 以平滑报童损失端到端训练、直接输出订货量 (训练平滑/评估硬损失保证可比)；401 天同口径下平均日成本较 SAA 基线降低 10.3%–22.3%，在 9 档 τ 上均优于 RF/KNN/Logistic/MLP 基线。</li>
                 </ul>
             </div>
         </div>

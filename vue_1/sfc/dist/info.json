@@ -1,14 +1,14 @@
 {
   "name": {
-    "en": "Lei Wang",
+    "en": "王磊",
     "zh": "王磊"
   },
   "avatarUrl": "/images/new_avatar.jpg",
-  "title": "Lei Wang | Zhejiang University",
+  "title": "王磊 | 浙江大学",
   "intro": [
     {
       "type": "text",
-      "content": "<strong class=\"font-bold\">Lei Wang (王磊)</strong> is currently an undergraduate student at the <a href=\"http://www.som.zju.edu.cn/\" target=\"_blank\" class=\"som-link\">School of Management, Zhejiang University</a> (ZJU), majoring in Information Management and Information Systems. His research interests include <strong class=\"font-bold\">Python Data Science</strong>, Supply Chain Optimization, and Financial Engineering."
+      "content": "<strong class=\"font-bold\">王磊</strong> is currently an undergraduate student at the <a href=\"http://www.som.zju.edu.cn/\" target=\"_blank\" class=\"som-link\">School of Management, Zhejiang University</a> (ZJU), majoring in Information Management and Information Systems. His research interests include <strong class=\"font-bold\">Python Data Science</strong>, Supply Chain Optimization, and Financial Engineering."
     },
     {
       "type": "text",
@@ -97,5 +97,5 @@
     { "label": "Education", "href": "#education" },
     { "label": "Projects", "href": "#projects" }
   ],
-  "footer": "Copyright © 2026 Lei Wang. All Rights Reserved. | Zhejiang University"
+  "footer": "Copyright © 2026 王磊. All Rights Reserved. | Zhejiang University"
 }
