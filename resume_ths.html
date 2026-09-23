@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王磊 - 个人简历 (同花顺投递版)</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            color: #0f172a;
+            background-color: #f1f5f9;
+            line-height: 1.4;
+            margin: 0;
+            padding: 16px 8px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 顶部操作与切换栏（打印时隐藏） */
+        .resume-action-bar {
+            max-width: 820px;
+            margin: 0 auto 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            font-size: 13px;
+        }
+
+        .resume-action-bar a {
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .resume-action-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .action-tag {
+            background: #f1f5f9;
+            color: #0f172a;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .btn-print {
+            background: #0f172a;
+            color: #ffffff !important;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: 0.2s;
+            font-size: 12.5px;
+        }
+
+        .btn-print:hover {
+            background: #334155;
+            text-decoration: none !important;
+        }
+
+        /* 简历纸张容器（标准A4单页适配） */
+        .resume-container {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px 32px;
+            border: 1px solid #cbd5e1;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin-top: 0;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 6px;
+            border-bottom: 1.5px solid #0f172a;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .name-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+            letter-spacing: 1px;
+            color: #0f172a;
+        }
+
+        .target-job-badge {
+            font-size: 12px;
+            background: #f8fafc;
+            color: #334155;
+            border: 1px solid #cbd5e1;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .contact-info {
+            font-size: 12px;
+            color: #334155;
+            line-height: 1.35;
+        }
+
+        .contact-info span {
+            margin: 0 5px;
+        }
+
+        .contact-info span:first-child {
+            margin-left: 0;
+        }
+
+        .contact-info a {
+            color: #334155;
+            text-decoration: none;
+        }
+
+        .header-avatar {
+            margin-left: 18px;
+        }
+
+        .header-avatar img {
+            width: 66px;
+            height: 88px;
+            object-fit: cover;
+            object-position: center 10%;
+            border-radius: 3px;
+            border: 1px solid #cbd5e1;
+            display: block;
+        }
+
+        h2 {
+            font-size: 14px;
+            color: #0f172a;
+            border-bottom: 1px solid #0f172a;
+            padding-bottom: 2px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .section {
+            margin-bottom: 3px;
+        }
+
+        .item {
+            margin-bottom: 3px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .item-left {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .item-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .item-subtitle {
+            font-size: 12px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .item-date {
+            font-size: 12px;
+            color: #475569;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 16px;
+        }
+
+        li {
+            font-size: 11.5px;
+            line-height: 1.20;
+            margin-bottom: 1.5px;
+            color: #1e293b;
+            text-align: justify;
+        }
+
+        li strong {
+            color: #0f172a;
+        }
+
+        .skills-p {
+            font-size: 11.5px;
+            margin: 0;
+            line-height: 1.35;
+            color: #1e293b;
+            text-align: justify;
+        }
+
+        .skills-p strong {
+            color: #0f172a;
+        }
+
+        .edu-details {
+            font-size: 11.5px;
+            color: #334155;
+            margin-top: 2px;
+            line-height: 1.35;
+        }
+
+        /* 打印适配：严格单页A4控制 */
+        @page {
+            margin: 5mm 7mm;
+            size: A4 portrait;
+        }
+
+        @media print {
+            body {
+                padding: 0 !important;
+                margin: 0 !important;
+                background-color: #fff !important;
+            }
+
+            .resume-action-bar {
+                display: none !important;
+            }
+
+            .resume-container {
+                max-width: 100% !important;
+                padding: 0 !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+
+            h2 {
+                border-bottom: 1px solid #000 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 顶部操作栏 -->
+    <div class="resume-action-bar">
+        <div>
+            <span class="action-tag"><i class="fa-solid fa-file-lines"></i> 同花顺投递版（每段经历 ≤300 字）</span>
+            <span style="color: #cbd5e1; margin: 0 6px;">|</span>
+            <span>其他版本：<a href="resume.html" style="color:#0f172a;"><i class="fa-solid fa-file-lines"></i> 综合版简历</a></span>
+            <span style="color: #cbd5e1; margin: 0 6px;">|</span>
+            <span><a href="resume_da.html" style="color: #2563eb;"><i class="fa-solid fa-chart-line"></i> 数据分析简历</a></span>
+            <span style="color: #cbd5e1; margin: 0 6px;">|</span>
+            <span><a href="resume_pm.html" style="color: #7c3aed;"><i class="fa-solid fa-wand-magic-sparkles"></i> AI产品经理简历</a></span>
+            <span style="color: #cbd5e1; margin: 0 6px;">|</span>
+            <a href="index.html"><i class="fa-solid fa-house"></i> 个人主页</a>
+        </div>
+        <div>
+            <button class="btn-print" onclick="window.print()"><i class="fa-solid fa-print"></i> 打印 / 导出PDF</button>
+        </div>
+    </div>
+
+    <div class="resume-container">
+        <!-- 头部个人信息 -->
+        <div class="header-container">
+            <div class="header-text">
+                <div class="name-row">
+                    <h1>王磊</h1>
+                </div>
+                <div class="contact-info">
+                    <span><i class="fa-solid fa-envelope"></i> <a href="mailto:3481618383@qq.com">3481618383@qq.com</a></span> |
+                    <span><i class="fa-solid fa-phone"></i> 13198491268</span> |
+                    <span><i class="fa-brands fa-weixin"></i> Mrthreestone666</span> |
+                    <span><i class="fa-solid fa-globe"></i> <a href="https://auroraping.github.io/personal-homepage/" target="_blank">主页: auroraping.github.io</a></span><br>
+                    <span>男 · 2005.04</span> |
+                    <span>浙江大学 · 管理学院</span> |
+                    <span>共青团员</span> |
+                    <span>英语六级</span>
+                </div>
+            </div>
+            <div class="header-avatar">
+                <img src="images/id_photo.png" alt="王磊 证件照">
+            </div>
+        </div>
+
+        <!-- 教育背景 -->
+        <div class="section">
+            <h2><i class="fa-solid fa-graduation-cap"></i> 教育背景 (Education)</h2>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-left">
+                        <span class="item-title">浙江大学 (Zhejiang University) · 管理学院</span>
+                        <span class="item-subtitle">信息管理与信息系统（本科）</span>
+                    </div>
+                    <span class="item-date">2023.09 – 至今</span>
+                </div>
+                <div class="edu-details">
+                    <strong>核心课程:</strong> Python语言、C语言、商务数据挖掘、数据库技术、运筹学、管理统计学、数据结构与算法
+                </div>
+            </div>
+        </div>
+
+        <!-- 专业技能 -->
+        <div class="section">
+            <h2><i class="fa-solid fa-screwdriver-wrench"></i> 专业技能 (Professional Skills)</h2>
+            <p class="skills-p">
+                <strong>编程与工程开发:</strong> 精通 Python (Pandas/NumPy/Scikit-learn/PyTorch) 与 SQL；熟悉 Vue 3 + Flask 全栈与 Git/Linux 协作。<br>
+                <strong>数据与自动化工程:</strong> 掌握数仓分层 (ODS/DWD/DWS/ADS) 与增量 ETL；运用影刀 RPA 采集与 Workflow 调度；熟悉 MySQL 建表/索引优化。<br>
+                <strong>金融与量化:</strong> 熟悉外汇衍生品 (远期/掉期/期权/EKI·EKO/TRF) 损益与套期有效性口径，及 VaR/敏感性/压力测试等风险计量方法；具备因子构建与回测调参实践。<br>
+                <strong>算法与数据科学:</strong> 掌握机器学习 (随机森林/LightGBM/KNN) 与深度学习 (DeepSets/MLP)；具备特征工程与多期报童运筹建模能力；熟练使用 Tableau、LaTeX。
+            </p>
+        </div>
+
+        <!-- 实习经历 -->
+        <div class="section">
+            <h2><i class="fa-solid fa-briefcase"></i> 实习经历 (Internship Experience)</h2>
+
+            <!-- 实习 1: 王小卤 -->
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-left">
+                        <span class="item-title">王小卤 · 电商多平台数据自动化与进销存驾驶舱</span>
+                        <span class="item-subtitle">AI数据实习生</span>
+                    </div>
+                    <span class="item-date">2026.08 – 至今</span>
+                </div>
+                <ul>
+                    <li><strong>多平台数据采集与 Skill 化流水线:</strong> 影刀 RPA 打通抖店/天猫/小红书等 8 平台 × 双口径采集；将成本匹配、订单合并、费用分摊与聚合封装为可复用 skill（SKILL.md 契约），双口径并发跑数使整链耗时缩短 50%~60%。</li>
+                    <li><strong>数据治理与上线运维:</strong> 建立品类命名归一化与飞书维表未命中熔断提醒；以流式 Gzip 压缩把线上同步耗时由 5 分钟压至 40 秒。</li>
+                    <li><strong>独立开发进销存驾驶舱 (0→1):</strong> 独立开发约 9,700 行的进销存驾驶舱：16 Sheet 幂等入库管道、14 项发布质检 (3 项跨表勾稽) 与 DeepSeek 双档 AI 助手。</li>
+                </ul>
+            </div>
+
+            <!-- 实习 2: 幻视金融 -->
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-left">
+                        <span class="item-title">外汇风险管理系统 · 套保分析与风险计量设计 (杭州幻视金融)</span>
+                        <span class="item-subtitle">产品经理实习生</span>
+                    </div>
+                    <span class="item-date">2026.06 – 2026.07</span>
+                </div>
+                <ul>
+                    <li><strong>套保分析域设计:</strong> 设计保底汇率 (进口/出口两套公式) 与边界汇率模型，规划敞口/交易试算与即期/远期/掉期/期权/EKI·EKO/TRF 六类对冲策略设置，支持止盈止损、分次锁汇与均线触发等可配置规则。</li>
+                    <li><strong>损益与有效性口径:</strong> 定义套期有效性判定 (比率法/回归法，80%–125%) 与六类策略四象限损益、TRF 敲出规则；沉淀远期汇率线性插值与累计损益递推规则。</li>
+                    <li><strong>风险计量域设计:</strong> 设计外汇 VaR (正态/历史模拟/蒙特卡洛，输出 VaR·MVaR·CVaR·IVaR 与风险贡献)、敏感性分析与压力情景测试，以及期权定价 Delta/Gamma 反显方案。</li>
+                </ul>
+            </div>
+
+            <!-- 实习 3: 移景科技 -->
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-left">
+                        <span class="item-title">杭州移景科技 · 量化策略开发与数据工具</span>
+                        <span class="item-subtitle">Python开发实习生</span>
+                    </div>
+                    <span class="item-date">2026.02 – 2026.05</span>
+                </div>
+                <ul>
+                    <li><strong>数据与因子库:</strong> 用 Tushare/AkShare 建日频 ETL 与 MySQL 因子库 (18 字段 + 复合唯一键 + 双索引)，交易日历驱动、先删后插与幂等 upsert。</li>
+                    <li><strong>策略与回测引擎:</strong> 自研长影线多空分歧度因子 (双路径打分 × 5 日选 4 日) + 换手率前 40% 过滤与大盘 MA20 熔断；实现 T+1 回测引擎与双账户资金仿真。</li>
+                    <li><strong>寻优与风险组合:</strong> 4 维 72 组网格以“平均年收益 − 1.5×年收益标准差”择优，完成 2023–2025 约 5,200 笔卖出回测；15 市值分位分层收益矩阵 + PyTorch MLP 输出每日规避名单。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 项目经历 -->
+        <div class="section">
+            <h2><i class="fa-solid fa-diagram-project"></i> 项目经历 (Project Experience)</h2>
+
+            <!-- 项目 1: 浙里淘书 -->
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-left">
+                        <span class="item-title">浙里淘书 (zook) · 校园二手教材交易平台</span>
+                        <span class="item-subtitle">核心开发者</span>
+                    </div>
+                    <span class="item-date">2026.04 – 2026.06</span>
+                </div>
+                <ul>
+                    <li><strong>架构与数据层:</strong> 主导 Vue 3 + Flask 双端架构 (18 页面 / 50 组件、12 蓝图 / 58 端点) 与 JSON→SQLite 适配器重构 (18 表 + WAL + 迁移/快照)，业务 API 零改动。</li>
+                    <li><strong>交易与实时通信:</strong> 实现订单双向确认状态机 (买卖方权限隔离) 与 Socket.IO 站内 IM (房间定向投递、消息双写、未读/已读与图片消息)。</li>
+                    <li><strong>认证与 AI 集成:</strong> 手写浙大 CAS SSO 抓取教务课表 + 自研 HS256 JWT；接入 DeepSeek 流式 AI 助手与 ChromaDB + 关键词混合检索。</li>
+                </ul>
+            </div>
+
+            <!-- 项目 2: 血液中心SRTP -->
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-left">
+                        <span class="item-title">医院血液中心库存决策优化系统 (SRTP科研项目)</span>
+                        <span class="item-subtitle">核心负责人</span>
+                    </div>
+                    <span class="item-date">2025.05 – 2026.05</span>
+                </div>
+                <ul>
+                    <li><strong>运筹建模与机理剖析:</strong> 将血液订货抽象为多期独立报童问题 (9 档临界分位)，提出偏差分解 Bias_τ ≈ Δμ + z_τ·Δσ；实测 RF/KNN/MLP 隐含发血率 19.9%/16.8%/15.5% vs 真实 14.0%。</li>
+                    <li><strong>端到端联合优化 (JEO):</strong> 用 DeepSets (padding+mask + 集合池化) 以平滑报童损失端到端训练、直接输出订货量；训练用平滑、评估用硬报童损失保证可比。</li>
+                    <li><strong>对比实验与工程实现:</strong> 复现 RF/KNN/Logistic/MLP 四类 SEO 基线；401 天同口径下 JEO 平均日成本较 SAA 基线降低 10.3%–22.3%。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 校园经历 -->
+        <div class="section">
+            <h2><i class="fa-solid fa-users"></i> 校园经历 (CAMPUS EXPERIENCE)</h2>
+            <ul>
+                <li>担任班级副班长与心理委员，统筹班级事务与团日策划；参与院党素培训部与校心理健康协会，负责讲座筹备与心理科普活动落地。</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
