@@ -76,6 +76,17 @@ h1, h2, h3, h4, .nav-name, .section-header {
 
 .nav-link:hover { color: var(--text-primary) !important; }
 
+.nav-link.nav-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+}
+
+.nav-link.nav-github i {
+    font-size: 1.05rem;
+}
+
 /* 容器布局 */
 .app-container {
     width: 85%;
@@ -325,6 +336,39 @@ h1, h2, h3, h4, .nav-name, .section-header {
 }
 
 .contact-icon { margin-right: 8px; color: var(--accent); opacity: 0.85; }
+
+a.contact-item-link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a.contact-item-link:hover {
+    background: #eef2ff;
+    border-color: #93c5fd;
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12);
+}
+
+a.contact-item-link:hover .contact-icon {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.contact-link-icon {
+    margin-left: auto;
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+a.contact-item-link:hover .contact-link-icon {
+    color: var(--accent);
+    opacity: 1;
+    transform: translate(2px, -2px);
+}
 
 /* 生活志 - 精致小卡片 */
 .lifestyle-section { margin-top: 40px; }
@@ -833,6 +877,18 @@ h1, h2, h3, h4, .nav-name, .section-header {
     color: var(--text-secondary);
     font-size: 0.8rem;
     border-top: 1px solid var(--border-soft);
+}
+
+.footer-github-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-github-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
 }
 
 /* 适配响应式 */
