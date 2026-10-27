@@ -10,9 +10,45 @@
         href="https://fonts.loli.net/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link href="fx.css" rel="stylesheet">
+    <noscript>
+        <style>.fx-intro{display:none!important}</style>
+    </noscript>
+    <script>
+        // 同一标签页内只播放一次开场动画
+        try {
+            if (sessionStorage.getItem('fxIntroDone') === '1') {
+                document.documentElement.classList.add('fx-skip-intro');
+            }
+        } catch (e) { }
+    </script>
 </head>
 
 <body class="body-element">
+
+
+    <!-- 动态背景 / 开场动画 / 滚动进度（fx.css + fx.js，删除即可回退） -->
+    <div class="fx-bg" aria-hidden="true">
+        <span class="fx-blob b1"></span>
+        <span class="fx-blob b2"></span>
+        <span class="fx-blob b3"></span>
+        <span class="fx-blob b4"></span>
+        <canvas class="fx-particles"></canvas>
+        <span class="fx-grid"></span>
+        <span class="fx-spot"></span>
+    </div>
+
+    <div class="fx-intro" id="fxIntro" aria-hidden="true">
+        <div class="fx-intro__name">王磊</div>
+        <div class="fx-intro__sub">Zhejiang University · IMIS</div>
+        <div class="fx-intro__bar"><i></i></div>
+    </div>
+
+    <div class="fx-progress" id="fxProgress" aria-hidden="true"></div>
+
+    <button class="fx-top" id="fxTop" type="button" aria-label="回到顶部">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <div id="top" class="top-anchor"></div>
 
@@ -31,6 +67,27 @@
         </div>
     </div>
 
+    <!-- 首屏 Hero -->
+    <section class="hero" aria-label="首屏介绍">
+        <p class="hero-eyebrow">WANG LEI · ZHEJIANG UNIVERSITY</p>
+        <h1 class="hero-title">王磊</h1>
+        <p class="hero-sub">数据 · 产品 · 量化 <span class="hero-sep">/</span> 用工程方法解决业务问题</p>
+        <div class="hero-actions">
+            <a class="hero-btn hero-btn--primary" href="#internship">
+                <i class="fa-solid fa-layer-group"></i> 浏览经历
+            </a>
+            <a class="hero-btn" href="resume_da.html" target="_blank">
+                <i class="fa-solid fa-file-lines"></i> 查看简历
+            </a>
+            <a class="hero-btn hero-btn--ghost" href="https://github.com/Auroraping" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+            <span>SCROLL</span>
+            <i class="fa-solid fa-arrow-down"></i>
+        </div>
+    </section>
     <div id="app" class="app-container">
 
         <div class="header-section" id="about">
@@ -514,6 +571,7 @@
             }
         });
     </script>
+    <script src="fx.js"></script>
 </body>
 
 </html>
